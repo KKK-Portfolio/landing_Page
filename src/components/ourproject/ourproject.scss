@@ -1,0 +1,65 @@
+@import "./../../variable/variable.scss";
+
+.project-image {
+  width: 437px;
+  height: 741px;
+
+  border-radius: 5px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.project-image::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.project-image img {
+  width: inherit;
+  height: inherit;
+}
+
+.project-text {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 90px;
+}
+
+.project-carousel-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-carousel {
+  width: 200px;
+  height: 365px;
+  margin-top: 30px;
+}
+
+.project-carousel img {
+  width: inherit;
+  height: inherit;
+}
+
+.project-btn {
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  margin-top: 0;
+  border-radius: 10px;
+}
+
+.project-btn:hover {
+  background-color: #000;
+  color: #fff;
+}

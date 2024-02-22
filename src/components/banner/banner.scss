@@ -1,0 +1,44 @@
+@import "./../../variable/variable.scss";
+
+.banner-container {
+  position: relative;
+}
+
+.carousel-item {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.carousel-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 50%);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-text {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  font-family: $PoppinsFont;
+
+  position: absolute;
+  top: 50%;
+  left: 100px;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  font-family: $PoppinsFont;
+  font-size: 24px;
+  border-radius: 10px;
+}
