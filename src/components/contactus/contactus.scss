@@ -1,0 +1,31 @@
+@import "./../../variable/variable.scss";
+
+.contact-container {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.text {
+  font-family: $PoppinsFont;
+  color: #fff;
+}
+
+.contact-header {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.contact-text {
+  font-size: 16px;
+}
+
+.contact-number {
+  font-size: 32px;
+  padding: 15px 0;
+}
+
+.contact-container a {
+  margin-right: 10px;
+}

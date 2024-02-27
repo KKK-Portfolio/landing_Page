@@ -4,17 +4,18 @@ import { Carousel } from "react-responsive-carousel";
 import bannerOne from "./../../assets/image/heroBanner.jpg";
 import bannerTwo from "./../../assets/image/bannertwo.jpg";
 import "./banner.css";
+import { Link } from "react-router-dom";
 
 class DemoCarousel extends Component {
   render() {
     return (
       <div className="banner-container">
-        <Carousel showThumbs={false} showIndicators={false}>
+        <Carousel showThumbs={false} autoPlay infiniteLoop showStatus={false}>
           <div className="carousel-item">
-            <img src={bannerOne} alt="banner" class="center" />
+            <img src={bannerOne} alt="banner" className="center" />
           </div>
           <div className="carousel-item">
-            <img src={bannerTwo} alt="banner" class="center" />
+            <img src={bannerTwo} alt="banner" className="center" />
           </div>
         </Carousel>
         <div className="carousel-text">
@@ -23,7 +24,10 @@ class DemoCarousel extends Component {
             With the good million company <br />
             Let's work together
           </p>
-          <button className="banner-btn">Connect With Us</button>
+
+          <Link to="/project">
+            <button className="banner-btn">View Our Projects</button>
+          </Link>
         </div>
       </div>
     );

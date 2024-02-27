@@ -1,0 +1,42 @@
+@import "./../../variable/variable.scss";
+
+.servicedetail {
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.servicedetail::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.servicedetail img {
+  width: inherit;
+  height: inherit;
+}
+
+.servicedetail-text p {
+  color: white;
+  font-family: $PoppinsFont;
+  margin: 0;
+  font-size: 36px;
+}
+
+.servicedetail-text span {
+  color: white;
+  font-family: $PoppinsFont;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  display: block;
+}

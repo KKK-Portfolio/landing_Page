@@ -1,0 +1,46 @@
+@import "./../../variable/variable.scss";
+
+.image-container {
+  width: inherit;
+  height: 742px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: inherit;
+  height: inherit;
+}
+
+.ourmission-text {
+  padding-right: 100px;
+}
+
+.ourmission-text span {
+  font-family: $PoppinsFont;
+  font-size: 24px;
+}
+
+.mission-title {
+  font-family: $PoppinsFont;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.mission-container {
+  width: inherit;
+  height: 434px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mission-container img {
+  width: inherit;
+  height: inherit;
+}
+
+.ourvision-text span {
+  font-family: $PoppinsFont;
+  font-size: 24px;
+}

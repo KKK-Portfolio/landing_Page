@@ -1,0 +1,31 @@
+/* Poppin */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+.contact-container {
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.text {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.contact-header {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.contact-text {
+  font-size: 16px;
+}
+
+.contact-number {
+  font-size: 32px;
+  padding: 15px 0;
+}
+
+.contact-container a {
+  margin-right: 10px;
+}/*# sourceMappingURL=contactus.css.map */

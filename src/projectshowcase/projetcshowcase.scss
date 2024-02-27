@@ -1,0 +1,53 @@
+@import "./../variable/variable.scss";
+
+.showcase {
+  width: 100%;
+  height: 433px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.showcase::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.showcase img {
+  width: inherit;
+  height: inherit;
+}
+
+.showcase-text {
+  position: absolute;
+  color: #fff;
+  padding-bottom: 20px;
+
+  bottom: 0;
+  left: 5%;
+
+  z-index: 1;
+}
+
+.showcase-text p {
+  font-weight: bold;
+  font-size: 32px;
+  font-family: $PoppinsFont;
+  margin: 0;
+}
+
+.showcase-text span {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $PoppinsFont;
+  margin: 0;
+}

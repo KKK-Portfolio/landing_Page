@@ -15,12 +15,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import logo from "./../../assets/logo/logo.png";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+
+import "./navbar.css";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About Us", "Projects", "Services"];
 
 function Navbar(props) {
-  const { window } = props;
+  const { window, scrollY, scrollToTop } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -53,38 +57,85 @@ function Navbar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ background: "black", padding: "10px 80px", boxShadow: "none" }}
+        sx={{ boxShadow: "none", background: "transparent" }}
       >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", sm: "block" },
-            }}
-          >
-            <img src={logo} alt="logo" />
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
-            ))}
-            <Button sx={{ color: "#fff", background: "red" }}>
-              Contact Us
-            </Button>
-          </Box>
-        </Toolbar>
+        <motion.div
+          initial={{ background: "transparent" }}
+          animate={{
+            background: scrollY > 300 ? "#000" : "transparent",
+          }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          style={{ padding: "10px 80px" }}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Box
+              component="div"
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", sm: "block" },
+              }}
+            >
+              <img src={logo} alt="logo" />
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                onClick={scrollToTop}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                onClick={scrollToTop}
+              >
+                About Us
+              </NavLink>
+              <NavLink
+                to="/project"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                onClick={scrollToTop}
+              >
+                Project
+              </NavLink>
+              <NavLink
+                to="/service"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                onClick={scrollToTop}
+              >
+                Service
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "contactBtn active" : "contactBtn"
+                }
+                onClick={scrollToTop}
+              >
+                Contact Us
+              </NavLink>
+            </Box>
+          </Toolbar>
+        </motion.div>
       </AppBar>
       <nav>
         <Drawer

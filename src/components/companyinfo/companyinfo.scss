@@ -1,0 +1,47 @@
+@import "./../../variable/variable.scss";
+
+.containers {
+  width: 100%;
+  height: 424px;
+
+  position: relative;
+}
+
+.containers::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.containers img {
+  width: inherit;
+  height: inherit;
+}
+
+.company-text {
+  position: absolute;
+  z-index: 1;
+
+  top: 30%;
+  padding: 0 100px;
+}
+
+.company-text p {
+  color: #fff;
+  font-family: $PoppinsFont;
+  font-weight: bold;
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.company-text span {
+  color: #fff;
+  font-family: $PoppinsFont;
+  font-weight: 500;
+  font-size: 32px;
+}

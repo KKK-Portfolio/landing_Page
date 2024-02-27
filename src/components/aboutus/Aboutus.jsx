@@ -7,7 +7,7 @@ import ProjectNumber from "./ProjectNumber";
 
 function Aboutus() {
   return (
-    <Box sx={{ padding: "100px", background: "#1C1C1C" }}>
+    <Box sx={{ padding: "50px 100px", background: "#fff" }}>
       <p className="titles">About Our Company</p>
       <Grid container>
         <Grid item xs={6}>

@@ -1,0 +1,33 @@
+@import "./../../variable/variable.scss";
+
+.avater-container {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: $PoppinsFont;
+  color: black;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.position {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: $PoppinsFont;
+  color: black;
+  margin-top: 0;
+}
+
+.testmonial-text {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: $PoppinsFont;
+  color: black;
+  text-align: left;
+  margin-bottom: 0;
+}

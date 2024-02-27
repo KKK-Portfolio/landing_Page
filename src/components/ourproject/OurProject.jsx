@@ -1,5 +1,5 @@
 import { Box, Button, Grid, IconButton } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import projectOne from "./../../assets/image/projectOne.avif";
 import projectTwo from "./../../assets/image/projectTwo.avif";
 import projectThree from "./../../assets/image/projectThree.avif";
@@ -8,17 +8,36 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 import "./ourproject.css";
+import { NavLink } from "react-router-dom";
 
 function OurProject() {
+  const imageArray = [projectOne, projectTwo, projectThree];
+  const [num, setNum] = useState(0);
+  const handleNext = () => {
+    if (num < 2) {
+      setNum(num + 1);
+    } else {
+      setNum(0);
+    }
+  };
+
+  const handlePrev = () => {
+    if (num > 0) {
+      setNum(num - 1);
+    } else {
+      setNum(2);
+    }
+  };
+
   return (
-    <Box sx={{ padding: "100px", background: "#E1E3E1" }}>
+    <Box sx={{ padding: "50px 100px", background: "#ffffff" }}>
       <p className="titles" style={{ color: "#000" }}>
         Our Projects
       </p>
       <Grid container>
         <Grid item xs={6}>
           <div className="project-image">
-            <img src={projectOne} alt="about" />
+            <img src={imageArray[num]} alt="about" />
           </div>
         </Grid>
         <Grid item xs={6}>
@@ -31,15 +50,27 @@ function OurProject() {
           </p>
           <Box>
             <div className="project-carousel-container">
-              <div className="project-carousel">
+              <div
+                className={
+                  num === 0 ? "project-carousel active" : "project-carousel"
+                }
+              >
                 <img src={projectOne} alt="project" />
               </div>
 
-              <div className="project-carousel">
+              <div
+                className={
+                  num === 1 ? "project-carousel active" : "project-carousel"
+                }
+              >
                 <img src={projectTwo} alt="project" />
               </div>
 
-              <div className="project-carousel">
+              <div
+                className={
+                  num === 2 ? "project-carousel active" : "project-carousel"
+                }
+              >
                 <img src={projectThree} alt="project" />
               </div>
             </div>
@@ -51,16 +82,17 @@ function OurProject() {
               }}
             >
               <div>
-                <IconButton>
+                <IconButton onClick={handlePrev}>
                   <ArrowBackIosIcon sx={{ fontSize: 40 }} />
                 </IconButton>
-                <IconButton>
+                <IconButton onClick={handleNext}>
                   <ArrowForwardIosIcon sx={{ fontSize: 40 }} />
                 </IconButton>
               </div>
-              <Button className="project-btn">
-                View Project <ArrowForwardIcon />
-              </Button>
+              <NavLink to="/project" className="project-btn">
+                <span>View Project</span>
+                <ArrowForwardIcon sx={{ marginLeft: "10px" }} />
+              </NavLink>
             </Box>
           </Box>
         </Grid>

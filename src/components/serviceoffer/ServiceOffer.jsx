@@ -8,7 +8,7 @@ import "./serviceoffer.css";
 
 function ServiceOffer() {
   return (
-    <Box sx={{ padding: "100px", background: "#1C1C1C" }}>
+    <Box sx={{ padding: "50px 100px", background: "#fff" }}>
       <p className="titles">Services We Offered</p>
       <p className="about-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

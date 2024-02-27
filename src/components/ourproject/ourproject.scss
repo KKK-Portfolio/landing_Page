@@ -44,6 +44,12 @@
   width: 200px;
   height: 365px;
   margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-carousel.active {
+  border: #000 solid 5px;
 }
 
 .project-carousel img {
@@ -53,13 +59,20 @@
 
 .project-btn {
   font-size: 20px;
-  color: #000;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
   font-weight: 700;
   margin-top: 0;
   border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-btn:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }

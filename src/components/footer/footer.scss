@@ -1,0 +1,29 @@
+@import "./../../variable/variable.scss";
+
+.texts {
+  font-family: $PoppinsFont;
+  color: #fff;
+}
+
+.footer-header {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+address {
+  font-size: 24px;
+}
+
+.link {
+  font-size: 16px;
+  margin: 10px 0;
+  display: block;
+}
+
+.map-container {
+  width: 436px;
+  height: 231px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}

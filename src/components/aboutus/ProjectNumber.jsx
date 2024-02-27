@@ -30,7 +30,7 @@ function ProjectNumber() {
         <div className="project-number">
           <img src={staff} alt="finished" />
           <p className="number">300</p>
-          <p className="text">Staff</p>
+          <p className="text">Staff Members</p>
         </div>
       </div>
 

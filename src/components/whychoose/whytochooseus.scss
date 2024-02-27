@@ -1,0 +1,54 @@
+@import "./../../variable/variable.scss";
+
+.backImage {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url(./../../assets/image/blue_print.webp);
+  background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+  position: relative;
+}
+
+.content-container {
+  z-index: 1;
+}
+
+.why-choose-us-container {
+  width: 400px;
+  height: 200px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.why-choose-us-container img {
+  width: inherit;
+  height: inherit;
+}
+
+.why-choose-us-container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.why-choose-us-container p {
+  font-family: $PoppinsFont;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+  position: absolute;
+  top: 50%;
+  left: 5%;
+
+  z-index: 1;
+}
