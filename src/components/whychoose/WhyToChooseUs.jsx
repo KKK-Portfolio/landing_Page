@@ -24,37 +24,37 @@ function WhyToChooseUs() {
           labore{" "}
         </p>
         <Grid container spacing={2} sx={{ paddingTop: "50px" }}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={safety} alt="background" />
               <p>Safety</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={reliable} alt="background" />
               <p>Reliable</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={expert} alt="background" />
               <p>Experts</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={satification} alt="background" />
               <p>Client Satisfaction</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={renovation} alt="background" />
               <p>Renovation</p>
             </div>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={resource} alt="background" />
               <p>Resource</p>

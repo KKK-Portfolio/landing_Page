@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .project-image {
   width: 437px;
-  height: 741px;
+  height: 700px;
   border-radius: 5px;
   overflow: hidden;
   position: relative;
@@ -29,6 +29,7 @@
   font-weight: 700;
   margin-top: 0;
   margin-right: 90px;
+  margin-bottom: 0;
 }
 
 .project-carousel-container {
