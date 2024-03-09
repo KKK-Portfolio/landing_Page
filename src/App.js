@@ -21,7 +21,7 @@ function App() {
       setScrollY(window.scrollY);
     };
 
-    console.log(window);
+    // console.log(window);
 
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
@@ -43,6 +43,7 @@ function App() {
         <Route path="/service" element={<ServicePage />} />
         <Route path="/contact" element={<ConnectPage />} />
       </Routes>
+
       <Footer />
     </Router>
   );

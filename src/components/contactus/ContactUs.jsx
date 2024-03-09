@@ -10,9 +10,18 @@ function ContactUs() {
     <Box sx={{ padding: "50px 100px", background: "#E1E1E1" }}>
       <Grid
         container
-        sx={{ background: "#000", padding: "100px 0", borderRadius: "50px" }}
+        sx={{ background: "#000", padding: "50px 0", borderRadius: "50px" }}
       >
-        <Grid item xs={12} sm={6}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <div className="contact-container">
             <p className="text contact-header ">Contact Us</p>
             <span className="text contact-text">
@@ -32,7 +41,15 @@ function ContactUs() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} sm={6}></Grid>
+        <Grid item xs={12} sm={6}>
+          <form className="contact-form">
+            <input type="text" placeholder="Company Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message" rows="8" />
+
+            <button className="contact-button">Contact Us</button>
+          </form>
+        </Grid>
       </Grid>
     </Box>
   );
