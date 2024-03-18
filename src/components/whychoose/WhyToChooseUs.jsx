@@ -11,7 +11,7 @@ import "./whytochooseus.css";
 
 function WhyToChooseUs() {
   return (
-    <Box sx={{ padding: "50px 100px", background: "#fff" }}>
+    <Box sx={{ padding: { xs: "20px", md: "50px 100px" }, background: "#fff" }}>
       <div className="content-container">
         <p className="titles" style={{ color: "#000" }}>
           Why to choose Us?
@@ -24,7 +24,7 @@ function WhyToChooseUs() {
           labore{" "}
         </p>
         <Grid container spacing={2} sx={{ paddingTop: "50px" }}>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid item xs={4} md={6} lg={4}>
             <div className="why-choose-us-container">
               <img src={safety} alt="background" />
               <p>Safety</p>

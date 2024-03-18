@@ -45,4 +45,18 @@
 
 .banner-btn:hover {
   transform: scale(0.95);
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-item img {
+    width: inherit;
+    height: inherit;
+  }
+  .carousel-text {
+    font-size: 16px;
+    left: 50px;
+  }
+  .banner-btn {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=banner.css.map */

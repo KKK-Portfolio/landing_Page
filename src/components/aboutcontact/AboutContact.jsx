@@ -8,7 +8,7 @@ function AboutContact() {
   return (
     <Box
       sx={{
-        paddingLeft: "100px",
+        paddingLeft: { sx: "10px", md: "100px" },
         paddingBottom: "16px",
         backgroundColor: "#fff",
       }}
@@ -18,7 +18,10 @@ function AboutContact() {
           <img src={circle} alt="circle" />
         </div>
 
-        <div className="about-contact-text">
+        <Box
+          className="about-contact-text"
+          sx={{ display: { xs: "none", md: "block" } }}
+        >
           <p>
             Now to make dreams come true
             <br />
@@ -27,7 +30,18 @@ function AboutContact() {
             Let's work together
           </p>
           <button>Contact Us</button>
-        </div>
+        </Box>
+
+        <Box
+          className="about-contact-text"
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <p>
+            Now to make dreams come true With the good million compan Let's work
+            together
+          </p>
+          <button>Contact Us</button>
+        </Box>
       </div>
     </Box>
   );

@@ -1,7 +1,7 @@
 /* Poppin */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 .service-container {
-  width: 349px;
+  width: 95%;
   height: 313px;
   border-radius: 5px;
   overflow: hidden;
@@ -19,7 +19,7 @@
 }
 
 .service-container img {
-  width: inherit;
+  width: 100%;
   height: inherit;
 }
 
@@ -50,4 +50,19 @@
   color: white;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .service-container {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  .service-title {
+    font-size: 20px;
+  }
+  .service-text {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=serviceoffer.css.map */

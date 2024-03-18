@@ -7,18 +7,26 @@ import ProjectNumber from "./ProjectNumber";
 
 function Aboutus() {
   return (
-    <Box sx={{ padding: "50px 100px", background: "#fff" }}>
+    <Box sx={{ padding: { xs: "20px", md: "50px 100px" }, background: "#fff" }}>
       <p className="titles">About Our Company</p>
       <Grid container>
-        <Grid item xs={6}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ paddingRight: { xs: "0", md: "20px" } }}
+        >
           <div className="about-image">
             <img src={aboutOne} alt="about" />
           </div>
-          <div className="about-image">
+          <Box
+            sx={{ display: { xs: "none", md: "block" } }}
+            className="about-image"
+          >
             <img src={aboutTwo} alt="about" />
-          </div>
+          </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} md={6}>
           <p className="about-text">
             Since 2005, KAUNG KADAY KWAL has been a proud player in Myanmar's
             construction industry. Founded by [Founders' Names], driven by the

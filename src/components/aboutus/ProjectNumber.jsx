@@ -9,40 +9,45 @@ import backgroudyear from "./../../assets/image/year.avif";
 
 function ProjectNumber() {
   return (
-    <Box
+    <Grid
+      container
       sx={{
-        paddingTop: "50px",
-        display: "flex",
-        justifyContent: "space-between",
+        paddingTop: { sx: "35px", md: "50px" },
       }}
     >
-      <div className="project-number-container">
-        <img src={backgroudfinidh} alt="background" />
-        <div className="project-number">
-          <img src={finished} alt="finished" />
-          <p className="number">55</p>
-          <p className="text">Finished Projects</p>
+      <Grid item xs={4}>
+        <div className="project-number-container">
+          <img src={backgroudfinidh} alt="background" />
+          <div className="project-number">
+            <img src={finished} alt="finished" />
+            <p className="number">55</p>
+            <p className="text">Finished Projects</p>
+          </div>
         </div>
-      </div>
+      </Grid>
 
-      <div className="project-number-container">
-        <img src={backgroudstaff} alt="background" />
-        <div className="project-number">
-          <img src={staff} alt="finished" />
-          <p className="number">300</p>
-          <p className="text">Staff Members</p>
+      <Grid item xs={4}>
+        <div className="project-number-container">
+          <img src={backgroudstaff} alt="background" />
+          <div className="project-number">
+            <img src={staff} alt="finished" />
+            <p className="number">300</p>
+            <p className="text">Staff Members</p>
+          </div>
         </div>
-      </div>
+      </Grid>
 
-      <div className="project-number-container">
-        <img src={backgroudyear} alt="background" />
-        <div className="project-number">
-          <img src={year} alt="finished" />
-          <p className="number">8</p>
-          <p className="text">Year of Experience</p>
+      <Grid item xs={4}>
+        <div className="project-number-container">
+          <img src={backgroudyear} alt="background" />
+          <div className="project-number">
+            <img src={year} alt="finished" />
+            <p className="number">8</p>
+            <p className="text">Year of Experience</p>
+          </div>
         </div>
-      </div>
-    </Box>
+      </Grid>
+    </Grid>
   );
 }
 

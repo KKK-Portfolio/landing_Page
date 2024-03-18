@@ -10,7 +10,7 @@
 }
 
 .about-image {
-  width: 436px;
+  width: 100%;
   height: 300px;
   margin-bottom: 40px;
   border-radius: 10px;
@@ -27,17 +27,25 @@
   color: black;
   font-weight: 700;
   margin-top: 0;
-  margin-right: 90px;
 }
 
 .project-number-container {
-  width: 300px;
+  width: 95%;
+  // background-color: red;
   height: 333px;
 
   border-radius: 10px;
+  // margin-left: 10px;
   overflow: hidden;
 
+  // padding: 0 30px;
+
   position: relative;
+}
+
+.project-number-container img {
+  width: 100%;
+  height: inherit;
 }
 
 .project-number-container::after {
@@ -50,11 +58,6 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.project-number-container img {
-  width: inherit;
-  height: inherit;
 }
 
 .project-number {
@@ -92,4 +95,39 @@
   width: 64px;
   height: 64px;
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .titles {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-text {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .project-number-container {
+    // width: 100%;
+    height: 150px;
+  }
+
+  .number {
+    font-size: 32px;
+  }
+
+  .text {
+    font-size: 10px;
+  }
+
+  .project-number img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 40px;
+  }
 }

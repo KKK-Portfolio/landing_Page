@@ -5,7 +5,7 @@ import "./footer.css";
 
 function Footer() {
   return (
-    <Box sx={{ padding: "0 100px", background: "#1C1C1C" }}>
+    <Box sx={{ padding: { xs: "20px", md: "0 100px" }, background: "#1C1C1C" }}>
       <Grid container>
         <Grid item xs={12} sm={6}>
           <p className="texts footer-header">Our office</p>
@@ -18,29 +18,15 @@ function Footer() {
             <iframe
               title="map"
               width="100%"
-              height="231"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
+              height="331px"
               src="https://maps.google.com/maps?width=100%25&amp;height=231&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(OTAS)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             >
               <a href="https://www.gps.ie/">gps vehicle tracker</a>
             </iframe>
-            {/* <iframe
-              id="map"
-              width="100%"
-              height="231"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=231&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(OTAS)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            >
-              <a href="https://www.gps.ie/">gps vehicle tracker</a>
-            </iframe> */}
           </div>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Box sx={{ padding: "0 80px" }}>
+          <Box sx={{ padding: { sx: "10px", md: "30px" } }}>
             <p className="texts footer-header">Logo</p>
             <p className="texts address">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

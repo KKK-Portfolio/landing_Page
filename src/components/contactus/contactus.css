@@ -74,4 +74,36 @@
   padding: 10px 30px;
   border-radius: 10px;
   margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-container {
+    padding: 0 20px;
+  }
+  .contact-header {
+    font-size: 18px;
+  }
+  .contact-text {
+    font-size: 10px;
+  }
+  .contact-number {
+    font-size: 16px;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+  }
+  .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+    font-size: 10px;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 10px;
+  }
+  .contact-form .contact-button {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=contactus.css.map */

@@ -7,10 +7,14 @@ import "./contactus.css";
 
 function ContactUs() {
   return (
-    <Box sx={{ padding: "50px 100px", background: "#E1E1E1" }}>
+    <Box sx={{ padding: { xs: "0", md: "50px 100px" }, background: "#E1E1E1" }}>
       <Grid
         container
-        sx={{ background: "#000", padding: "50px 0", borderRadius: "50px" }}
+        sx={{
+          background: "#000",
+          padding: "50px 0",
+          borderRadius: { xs: "0", md: "50px" },
+        }}
       >
         <Grid
           item

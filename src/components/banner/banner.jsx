@@ -10,7 +10,13 @@ class DemoCarousel extends Component {
   render() {
     return (
       <div className="banner-container">
-        <Carousel showThumbs={false} autoPlay infiniteLoop showStatus={false}>
+        <Carousel
+          showThumbs={false}
+          autoPlay
+          infiniteLoop
+          showStatus={false}
+          swipeable={false}
+        >
           <div className="carousel-item">
             <img src={bannerOne} alt="banner" className="center" />
           </div>

@@ -73,3 +73,38 @@
     margin: auto;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .contact-container {
+    padding: 0 20px;
+  }
+
+  .contact-header {
+    font-size: 18px;
+  }
+
+  .contact-text {
+    font-size: 10px;
+  }
+
+  .contact-number {
+    font-size: 16px;
+  }
+  .contact-form {
+    padding: 20px;
+
+    input,
+    textarea {
+      padding: 10px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 10px;
+    }
+
+    .contact-button {
+      font-size: 12px;
+    }
+  }
+}

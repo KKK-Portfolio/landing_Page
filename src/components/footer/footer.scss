@@ -10,7 +10,7 @@
   font-weight: 700;
 }
 
-address {
+.address {
   font-size: 24px;
 }
 
@@ -21,9 +21,23 @@ address {
 }
 
 .map-container {
-  width: 436px;
-  height: 231px;
+  // width: 436px;
+  height: 331px;
   border-radius: 10px;
   overflow: hidden;
   margin: 20px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-header {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 10px;
+  }
+
+  .address {
+    font-size: 12px;
+  }
 }

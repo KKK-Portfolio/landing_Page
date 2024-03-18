@@ -30,7 +30,13 @@ function OurProject() {
   };
 
   return (
-    <Box sx={{ padding: "50px 100px", background: "#ffffff" }}>
+    <Box
+      sx={{
+        padding: "50px 100px",
+        background: "#ffffff",
+        display: { xs: "none", lg: "block" },
+      }}
+    >
       <p className="titles" style={{ color: "#000" }}>
         Our Projects
       </p>

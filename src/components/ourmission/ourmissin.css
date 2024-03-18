@@ -29,7 +29,7 @@
 }
 
 .mission-container {
-  width: inherit;
+  width: 100%;
   height: 434px;
   border-radius: 10px;
   overflow: hidden;
@@ -43,4 +43,32 @@
 .ourvision-text span {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  .image-container {
+    width: 100%;
+    height: 342px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .ourmission-text {
+    padding-right: 0px;
+  }
+  .ourmission-text span {
+    font-size: 12px;
+  }
+  .mission-title {
+    font-size: 16px;
+  }
+  .ourvision-text span {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+  }
+  .mission-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=ourmissin.css.map */

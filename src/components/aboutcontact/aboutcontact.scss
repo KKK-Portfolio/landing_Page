@@ -65,3 +65,35 @@
   box-shadow: none;
   border: none;
 }
+
+@media (max-width: 600px) {
+  .circle-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: red;
+
+    position: absolute;
+    right: -10%;
+    top: 40%;
+
+    overflow: hidden;
+  }
+
+  .about-contact-text {
+    position: absolute;
+    top: 30%;
+    // left: 50%;
+    transform: translateY(-50%);
+  }
+
+  .about-contact-text p {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  .about-contact-text button {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+}

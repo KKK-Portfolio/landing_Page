@@ -13,7 +13,6 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import logo from "./../../assets/logo/logo.png";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -34,7 +33,7 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        KKK
       </Typography>
       <Divider />
       <List>
@@ -65,7 +64,7 @@ function Navbar(props) {
             background: scrollY > 300 ? "#000" : "transparent",
           }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          style={{ padding: "10px 80px" }}
+          style={{ padding: { xs: "20px", md: "10px 80px" } }}
         >
           <Toolbar>
             <IconButton
@@ -73,7 +72,7 @@ function Navbar(props) {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
+              sx={{ mr: 1, display: { sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>

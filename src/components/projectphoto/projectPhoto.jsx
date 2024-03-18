@@ -10,25 +10,31 @@ import six from "./../../assets/image/pldetail6.png";
 
 function ProjectPhoto() {
   return (
-    <Box sx={{ paddingLeft: "100px", paddingY: "50px", background: "#ffffff" }}>
+    <Box
+      sx={{
+        paddingX: { xs: "10px", md: "100px" },
+        paddingY: "50px",
+        background: "#ffffff",
+      }}
+    >
       <Grid container spacing={2}>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={one} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={one} alt="pj" style={{ width: "100%" }} />
         </Grid>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={two} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={two} alt="pj" style={{ width: "100%" }} />
         </Grid>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={three} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={three} alt="pj" style={{ width: "100%" }} />
         </Grid>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={four} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={four} alt="pj" style={{ width: "100%" }} />
         </Grid>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={five} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={five} alt="pj" style={{ width: "100%" }} />
         </Grid>
-        <Grid item xs={4} sx={{ overflow: "hidden" }}>
-          <img src={six} about="pj" />
+        <Grid item xs={12} md={6} lg={4} sx={{ overflow: "hidden" }}>
+          <img src={six} alt="pj" style={{ width: "100%" }} />
         </Grid>
       </Grid>
     </Box>

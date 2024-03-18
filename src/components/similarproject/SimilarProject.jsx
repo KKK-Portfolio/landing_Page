@@ -3,10 +3,16 @@ import React from "react";
 import projectOne from "./../../assets/image/projectOne.avif";
 import projectTwo from "./../../assets/image/projectTwo.avif";
 import projectThree from "./../../assets/image/projectThree.avif";
+import { useNavigate } from "react-router-dom";
 
 function SimilarProject() {
+  const navigate = useNavigate();
+
+  const clickHandler = (e) => {
+    navigate("/project/1");
+  };
   return (
-    <Box sx={{ padding: "50px 100px", background: "#fff" }}>
+    <Box sx={{ padding: { xs: "20px", md: "50px 100px" }, background: "#fff" }}>
       <p className="titles">Other Similar Projects</p>
       <p className="about-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -15,7 +21,7 @@ function SimilarProject() {
         incididunt ut labore eiusmod tempor incididunt ut labore{" "}
       </p>
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectOne} alt="banner" />
 
@@ -25,7 +31,7 @@ function SimilarProject() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectTwo} alt="banner" />
 
@@ -35,7 +41,7 @@ function SimilarProject() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectThree} alt="banner" />
 

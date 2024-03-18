@@ -8,7 +8,12 @@ import "./ourmissin.css";
 
 function OurMission() {
   return (
-    <Box sx={{ padding: "50px 100px", backgroundColor: "#fff" }}>
+    <Box
+      sx={{
+        padding: { xs: "30px 10px", md: "50px 100px" },
+        backgroundColor: "#fff",
+      }}
+    >
       <Grid container className="ourmission-container">
         <Grid item xs={12} md={6} className="ourmission-text">
           <span>
@@ -55,7 +60,12 @@ function OurMission() {
       </Grid>
       <p className="mission-title">Our Vission</p>
       <Grid container className="ourmission-container">
-        <Grid item xs={12} md={6} sx={{ paddingRight: "100px" }}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ paddingRight: { xs: "0", md: "100px" } }}
+        >
           <div className="mission-container">
             <img src={vision} alt="mission" />
           </div>

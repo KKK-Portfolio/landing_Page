@@ -8,7 +8,7 @@ import "./servicedetail.css";
 
 function Servicedetail() {
   return (
-    <Box sx={{ padding: "50px 100px" }}>
+    <Box sx={{ padding: { xs: "30px 10px", md: "50px 100px" } }}>
       <Grid container sx={{ borderRadius: "20px", overflow: "hidden" }}>
         <Grid item xs={12} md={6} lg={6}>
           <div className="servicedetail">
@@ -22,7 +22,7 @@ function Servicedetail() {
           lg={6}
           sx={{
             background: "#1C1C1C",
-            padding: "10px 50px",
+            padding: { xs: "10px", md: "10px 50px" },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -42,7 +42,11 @@ function Servicedetail() {
       </Grid>
       <Grid
         container
-        sx={{ borderRadius: "20px", overflow: "hidden", marginY: "50px" }}
+        sx={{
+          borderRadius: "20px",
+          overflow: "hidden",
+          marginY: { xs: "30px", md: "50px" },
+        }}
       >
         <Grid item xs={12} md={6} lg={6}>
           <div className="servicedetail">
@@ -56,7 +60,7 @@ function Servicedetail() {
           lg={6}
           sx={{
             background: "#1C1C1C",
-            padding: "10px 50px",
+            padding: { xs: "10px", md: "10px 50px" },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -87,7 +91,7 @@ function Servicedetail() {
           lg={6}
           sx={{
             background: "#1C1C1C",
-            padding: "10px 50px",
+            padding: { xs: "10px", md: "10px 50px" },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

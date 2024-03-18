@@ -1,5 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import projectOne from "./../assets/image/projectOne.avif";
 import projectTwo from "./../assets/image/projectTwo.avif";
 import projectThree from "./../assets/image/projectThree.avif";
@@ -9,10 +10,21 @@ import projectFive from "./../assets/image/projectFive.avif";
 import "./projetcshowcase.css";
 
 function ProjectShowcase() {
+  const navigate = useNavigate();
+
+  const clickHandler = (e) => {
+    navigate("/project/1");
+  };
+
   return (
-    <Box sx={{ padding: "50px 100px 0", background: "#ffffff" }}>
+    <Box
+      sx={{
+        padding: { xs: "30px 10px", md: "50px 100px" },
+        background: "#ffffff",
+      }}
+    >
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectOne} alt="banner" />
 
@@ -22,7 +34,7 @@ function ProjectShowcase() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectTwo} alt="banner" />
 
@@ -32,7 +44,7 @@ function ProjectShowcase() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectThree} alt="banner" />
 
@@ -42,7 +54,7 @@ function ProjectShowcase() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectFour} alt="banner" />
 
@@ -52,7 +64,7 @@ function ProjectShowcase() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
           <div className="showcase">
             <img src={projectFive} alt="banner" />
 
