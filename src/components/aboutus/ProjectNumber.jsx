@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import finished from "./../../assets/image/finish.png";
 import staff from "./../../assets/image/staff.png";

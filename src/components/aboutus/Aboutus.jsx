@@ -2,8 +2,8 @@ import { Box, Grid } from "@mui/material";
 import React from "react";
 import aboutOne from "./../../assets/image/aboutusOne.avif";
 import aboutTwo from "./../../assets/image/aboutusTwo.avif";
-import "./../aboutus/aboutus.css";
 import ProjectNumber from "./ProjectNumber";
+import "./../aboutus/aboutus.css";
 
 function Aboutus() {
   return (

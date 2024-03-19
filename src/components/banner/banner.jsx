@@ -3,8 +3,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import bannerOne from "./../../assets/image/heroBanner.jpg";
 import bannerTwo from "./../../assets/image/bannertwo.jpg";
-import "./banner.css";
 import { Link } from "react-router-dom";
+import "./banner.css";
 
 class DemoCarousel extends Component {
   render() {
