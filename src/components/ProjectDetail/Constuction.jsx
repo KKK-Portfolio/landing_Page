@@ -1,6 +1,5 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import projectinfo from "./../../assets/image/projectinfo.avif";
 import projectOne from "./../../assets/image/projectOne.avif";
 import projectTwo from "./../../assets/image/projectTwo.avif";
 import projectThree from "./../../assets/image/projectThree.avif";
