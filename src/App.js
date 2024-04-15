@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import { useEffect, useState } from "react";
 import AnimatedRoute from "./components/AnimatedRoute";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -29,7 +30,8 @@ function App() {
 
   return (
     <Router>
-      <Navbar scrollY={scrollY} scrollToTop={scrollToTop} />
+      <ScrollToTop />
+      <Navbar scrollY={scrollY} />
       <AnimatedRoute />
       <Footer />
     </Router>

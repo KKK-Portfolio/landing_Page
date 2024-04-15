@@ -47,6 +47,20 @@
   transform: scale(0.95);
 }
 
+@media screen and (max-width: 992px) {
+  .carousel-item img {
+    width: inherit;
+    height: inherit;
+  }
+  .carousel-text {
+    font-size: 20px;
+    left: 50px;
+    top: 35%;
+  }
+  .banner-btn {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 600px) {
   .carousel-item img {
     width: inherit;

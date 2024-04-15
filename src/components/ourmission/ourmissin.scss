@@ -1,8 +1,8 @@
 @import "./../../variable/variable.scss";
 
 .image-container {
-  width: inherit;
-  height: 742px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -30,7 +30,7 @@
 
 .mission-container {
   width: 100%;
-  height: 434px;
+  height: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -43,6 +43,43 @@
 .ourvision-text span {
   font-family: $PoppinsFont;
   font-size: 24px;
+}
+
+@media screen and (max-width: 1200px) {
+  .ourmission-text span {
+    font-size: 12px;
+  }
+
+  .ourmission-text {
+    padding-right: 0px;
+    padding-bottom: 10px;
+  }
+
+  .ourmission-text span {
+    font-size: 16px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 442px;
+  }
+
+  .ourmission-text {
+    padding-right: 0px;
+  }
+
+  .ourmission-text span {
+    font-size: 20px;
+  }
+
+  .mission-title {
+    font-size: 25px;
+  }
+
+  .ourvision-text span {
+    font-family: $PoppinsFont;
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 600px) {

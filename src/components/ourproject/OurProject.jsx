@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import React, { useState } from "react";
 import projectOne from "./../../assets/image/projectOne.avif";
 import projectTwo from "./../../assets/image/projectTwo.avif";
@@ -11,7 +11,15 @@ import "./ourproject.css";
 import { NavLink } from "react-router-dom";
 
 function OurProject() {
-  const imageArray = [projectOne, projectTwo, projectThree];
+  const imageArray = [
+    { name: "City Center Spark", text: "Civil Enginering", image: projectOne },
+    { name: "City Middle Spark", text: "Civil Enginering", image: projectTwo },
+    {
+      name: "City Last Spark",
+      text: "Civil Enginering",
+      image: projectThree,
+    },
+  ];
   const [num, setNum] = useState(0);
   const handleNext = () => {
     if (num < 2) {
@@ -32,21 +40,21 @@ function OurProject() {
   return (
     <Box
       sx={{
-        padding: "50px 100px",
+        padding: { xs: "20px", lg: "50px 100px" },
         background: "#ffffff",
-        display: { xs: "none", lg: "block" },
+        // display: { xs: "none", lg: "block" },
       }}
     >
       <p className="titles" style={{ color: "#000" }}>
         Our Projects
       </p>
       <Grid container>
-        <Grid item xs={6}>
-          <div className="project-image">
-            <img src={imageArray[num]} alt="about" />
-          </div>
+        <Grid item xs={12} lg={6}>
+          <Box className="project-image">
+            <img src={imageArray[num].image} alt="about" />
+          </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} lg={6} sx={{ paddingLeft: { xs: "0", lg: "20px" } }}>
           <p className="project-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
@@ -55,7 +63,10 @@ function OurProject() {
             labore
           </p>
           <Box>
-            <div className="project-carousel-container">
+            <Box
+              sx={{ display: { xs: "none", lg: "flex" } }}
+              className="project-carousel-container"
+            >
               <div
                 className={
                   num === 0 ? "project-carousel active" : "project-carousel"
@@ -79,7 +90,7 @@ function OurProject() {
               >
                 <img src={projectThree} alt="project" />
               </div>
-            </div>
+            </Box>
             <Box
               sx={{
                 paddingTop: "15px",
@@ -88,17 +99,27 @@ function OurProject() {
               }}
             >
               <div>
-                <IconButton onClick={handlePrev}>
-                  <ArrowBackIosIcon sx={{ fontSize: 40 }} />
-                </IconButton>
-                <IconButton onClick={handleNext}>
-                  <ArrowForwardIosIcon sx={{ fontSize: 40 }} />
-                </IconButton>
+                <ArrowBackIosIcon
+                  sx={{
+                    fontSize: 40,
+                  }}
+                  onClick={handlePrev}
+                />
+
+                <ArrowForwardIosIcon
+                  sx={{ fontSize: 40 }}
+                  onClick={handleNext}
+                />
               </div>
-              <NavLink to="/project" className="project-btn">
+              <Button
+                sx={{ background: "black" }}
+                variant="contained"
+                component={NavLink}
+                to="/contact"
+              >
                 <span>View Project</span>
                 <ArrowForwardIcon sx={{ marginLeft: "10px" }} />
-              </NavLink>
+              </Button>
             </Box>
           </Box>
         </Grid>

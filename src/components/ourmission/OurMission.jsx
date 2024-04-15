@@ -15,7 +15,7 @@ function OurMission() {
       }}
     >
       <Grid container className="ourmission-container">
-        <Grid item xs={12} md={6} className="ourmission-text">
+        <Grid item xs={12} lg={6} className="ourmission-text">
           <span>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
@@ -32,7 +32,7 @@ function OurMission() {
             labore
           </span>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} lg={6}>
           <div className="image-container">
             <img src={about} alt="about" />
           </div>
@@ -40,7 +40,7 @@ function OurMission() {
       </Grid>
       <p className="mission-title">Our Mission</p>
       <Grid container className="ourmission-container">
-        <Grid item xs={12} md={6} className="ourmission-text">
+        <Grid item xs={12} lg={6} className="ourmission-text">
           <span>
             Since 2005,{" "}
             <span style={{ fontWeight: "bold" }}>KAUNG KADAY KWAL</span> has
@@ -52,7 +52,7 @@ function OurMission() {
             testament to our commitment to [Values and Commitments].
           </span>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} lg={6}>
           <div className="mission-container">
             <img src={mission} alt="mission" />
           </div>
@@ -64,7 +64,7 @@ function OurMission() {
           item
           xs={12}
           md={6}
-          sx={{ paddingRight: { xs: "0", md: "100px" } }}
+          sx={{ paddingRight: { xs: "0", md: "20px", lg: "100px" } }}
         >
           <div className="mission-container">
             <img src={vision} alt="mission" />

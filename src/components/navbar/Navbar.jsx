@@ -14,15 +14,22 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import logo from "./../../assets/logo/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "./navbar.css";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About Us", "Projects", "Services"];
+const navItems = [
+  { to: "/", text: "Home" },
+  { to: "/about", text: "About Us" },
+  { to: "/project", text: "Our Projects" },
+  { to: "/service", text: "Services" },
+  { to: "/contact", text: "Contact Us" },
+];
 
 function Navbar(props) {
+  const navigate = useNavigate();
   const { window, scrollY, scrollToTop } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -38,9 +45,12 @@ function Navbar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.text} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              onClick={() => navigate(item.to)}
+            >
+              <ListItemText primary={item.text} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -91,7 +101,6 @@ function Navbar(props) {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                onClick={scrollToTop}
               >
                 Home
               </NavLink>
@@ -100,7 +109,6 @@ function Navbar(props) {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                onClick={scrollToTop}
               >
                 About Us
               </NavLink>
@@ -109,7 +117,6 @@ function Navbar(props) {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                onClick={scrollToTop}
               >
                 Project
               </NavLink>
@@ -118,7 +125,6 @@ function Navbar(props) {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                onClick={scrollToTop}
               >
                 Service
               </NavLink>
@@ -128,7 +134,6 @@ function Navbar(props) {
                 className={({ isActive }) =>
                   isActive ? "contactBtn active" : "contactBtn"
                 }
-                onClick={scrollToTop}
               >
                 Contact Us
               </NavLink>

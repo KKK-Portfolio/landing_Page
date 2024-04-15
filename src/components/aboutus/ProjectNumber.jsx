@@ -6,6 +6,21 @@ import year from "./../../assets/image/year.png";
 import backgroudfinidh from "./../../assets/image/finish.avif";
 import backgroudstaff from "./../../assets/image/staff.avif";
 import backgroudyear from "./../../assets/image/year.avif";
+import { useInView } from "react-intersection-observer";
+import { useSpring, animated } from "@react-spring/web";
+
+function Number({ n }) {
+  const [ref, inView] = useInView();
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: inView ? n : 0,
+    delay: 200,
+    config: { mass: 1, tension: 20, friction: 10 },
+  });
+  return (
+    <animated.span ref={ref}>{number.to((n) => n.toFixed(0))}</animated.span>
+  );
+}
 
 function ProjectNumber() {
   return (
@@ -20,7 +35,9 @@ function ProjectNumber() {
           <img src={backgroudfinidh} alt="background" />
           <div className="project-number">
             <img src={finished} alt="finished" />
-            <p className="number">55</p>
+            <p className="number">
+              <Number n={55} />
+            </p>
             <p className="text">Finished Projects</p>
           </div>
         </div>
@@ -31,7 +48,9 @@ function ProjectNumber() {
           <img src={backgroudstaff} alt="background" />
           <div className="project-number">
             <img src={staff} alt="finished" />
-            <p className="number">300</p>
+            <p className="number">
+              <Number n={300} />
+            </p>
             <p className="text">Staff Members</p>
           </div>
         </div>
@@ -42,7 +61,9 @@ function ProjectNumber() {
           <img src={backgroudyear} alt="background" />
           <div className="project-number">
             <img src={year} alt="finished" />
-            <p className="number">8</p>
+            <p className="number">
+              <Number n={8} />
+            </p>
             <p className="text">Year of Experience</p>
           </div>
         </div>

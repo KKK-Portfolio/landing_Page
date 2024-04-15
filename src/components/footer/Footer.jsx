@@ -7,7 +7,7 @@ function Footer() {
   return (
     <Box sx={{ padding: { xs: "20px", md: "0 100px" }, background: "#1C1C1C" }}>
       <Grid container>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{ padding: { sx: "10px", md: "30px" } }}>
           <p className="texts footer-header">Our office</p>
           <p className="texts address">
             No. 1, 1st Floor, 6th Street,
