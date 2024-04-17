@@ -29,6 +29,26 @@
   height: inherit;
 }
 
+.project-image-text {
+  position: absolute;
+  // background-color: white;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 100;
+}
+
+.project-image-text-title {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.project-image-text span {
+  color: white;
+}
+
 .project-text {
   font-size: 24px;
   color: #000;

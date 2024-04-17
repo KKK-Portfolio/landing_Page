@@ -4,13 +4,12 @@ import Footer from "./components/footer/Footer";
 import { useEffect, useState } from "react";
 import AnimatedRoute from "./components/AnimatedRoute";
 import ScrollToTop from "./components/ScrollToTop";
+import { QueryClientProvider, QueryClient } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
-
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,12 +28,14 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Navbar scrollY={scrollY} />
-      <AnimatedRoute />
-      <Footer />
-    </Router>
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <ScrollToTop />
+        <Navbar scrollY={scrollY} />
+        <AnimatedRoute />
+        <Footer />
+      </Router>
+    </QueryClientProvider>
   );
 }
 

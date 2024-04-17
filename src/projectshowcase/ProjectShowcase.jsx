@@ -1,20 +1,29 @@
 import { Box, Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import projectOne from "./../assets/image/projectOne.avif";
-import projectTwo from "./../assets/image/projectTwo.avif";
-import projectThree from "./../assets/image/projectThree.avif";
-import projectFour from "./../assets/image/projectFour.avif";
-import projectFive from "./../assets/image/projectFive.avif";
+import axios from "./../api/axios";
 
 import "./projetcshowcase.css";
 
 function ProjectShowcase() {
+  const [showcase, setshowcase] = useState([]);
   const navigate = useNavigate();
 
-  const clickHandler = (e) => {
-    navigate("/project/1");
+  const clickHandler = (id) => {
+    navigate(`/project/${id}`);
   };
+
+  async function fetchShowcase() {
+    try {
+      const res = await axios.get("api/v1/contents/allContents");
+      console.log(res.data.imageContents);
+      setshowcase(res.data.imageContents);
+    } catch (error) {}
+  }
+
+  useEffect(() => {
+    fetchShowcase();
+  }, []);
 
   return (
     <Box
@@ -24,56 +33,33 @@ function ProjectShowcase() {
       }}
     >
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
-          <div className="showcase">
-            <img src={projectOne} alt="banner" />
+        {showcase.length > 0 &&
+          showcase.map((item) => {
+            return (
+              <Grid
+                item
+                xs={12}
+                md={6}
+                lg={4}
+                onClick={() => {
+                  clickHandler(item.textContentRef._id);
+                }}
+                key={item._id}
+              >
+                <div className="showcase">
+                  <img
+                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${item.images[0].filename}`}
+                    alt="banner"
+                  />
 
-            <div className="showcase-text">
-              <p>City Center Spark</p>
-              <span>Civil Engineering</span>
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
-          <div className="showcase">
-            <img src={projectTwo} alt="banner" />
-
-            <div className="showcase-text">
-              <p>The Pinnacle Apartments</p>
-              <span>High-rise residential development</span>
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
-          <div className="showcase">
-            <img src={projectThree} alt="banner" />
-
-            <div className="showcase-text">
-              <p>The Heart of the City</p>
-              <span>Public space revitalization</span>
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
-          <div className="showcase">
-            <img src={projectFour} alt="banner" />
-
-            <div className="showcase-text">
-              <p>The Industrial Engine</p>
-              <span>Manufacturing facility</span>
-            </div>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={6} lg={4} onClick={clickHandler}>
-          <div className="showcase">
-            <img src={projectFive} alt="banner" />
-
-            <div className="showcase-text">
-              <p>Urban Oasis</p>
-              <span>Luxury Townhouse Development</span>
-            </div>
-          </div>
-        </Grid>
+                  <div className="showcase-text">
+                    <p> {item.textContentRef.title}</p>
+                    <span>{item.textContentRef.description}</span>
+                  </div>
+                </div>
+              </Grid>
+            );
+          })}
       </Grid>
     </Box>
   );

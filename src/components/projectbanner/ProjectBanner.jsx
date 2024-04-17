@@ -1,16 +1,39 @@
 import { Box } from "@mui/material";
-import React from "react";
-import projectOne from "./../../assets/image/projectOne.avif";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "./../../api/axios";
 
 import "./projectbanner.css";
 
 function ProjectBanner() {
+  const { id } = useParams();
+  const [image, setImage] = useState([]);
+  const [project, setProject] = useState([]);
+
+  async function fetchShowcase() {
+    try {
+      const res = await axios.get(`api/v1/contents/${id}`);
+      // console.log(res.data.imageContent.images[0].filename);
+      // setshowcase(res.data.imageContents);
+      setImage(res.data.imageContent.images[0].filename);
+      setProject(res.data.imageContent.textContentRef);
+    } catch (error) {}
+  }
+
+  useEffect(() => {
+    fetchShowcase();
+  }, []);
+
   return (
     <Box>
       <div className="projectbanner">
-        <img src={projectOne} alt="banner" className="center" />
+        <img
+          src={`https://kkk.otastechsolutions.com/api/v1/contents/${image}`}
+          alt="banner"
+          className="center"
+        />
         <div className="projectbanner-text">
-          <p>City Center Spark</p>
+          <p>{project.title}</p>
           <span>Civil Engineering</span>
         </div>
       </div>

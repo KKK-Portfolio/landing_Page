@@ -1,26 +1,31 @@
 import { Box, Button, Grid } from "@mui/material";
-import React, { useState } from "react";
-import projectOne from "./../../assets/image/projectOne.avif";
-import projectTwo from "./../../assets/image/projectTwo.avif";
-import projectThree from "./../../assets/image/projectThree.avif";
+import React, { useEffect, useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import axios from "./../../api/axios";
 
 import "./ourproject.css";
 import { NavLink } from "react-router-dom";
 
 function OurProject() {
-  const imageArray = [
-    { name: "City Center Spark", text: "Civil Enginering", image: projectOne },
-    { name: "City Middle Spark", text: "Civil Enginering", image: projectTwo },
-    {
-      name: "City Last Spark",
-      text: "Civil Enginering",
-      image: projectThree,
-    },
-  ];
+  const [showcase, setshowcase] = useState([]);
   const [num, setNum] = useState(0);
+
+  async function fetchShowcase() {
+    try {
+      const res = await axios.get("api/v1/contents/allContents");
+      // console.log(res.data.imageContents);
+      setshowcase(res.data.imageContents);
+    } catch (error) {}
+  }
+
+  useEffect(() => {
+    fetchShowcase();
+  }, []);
+
+  // console.log(showcase);
+
   const handleNext = () => {
     if (num < 2) {
       setNum(num + 1);
@@ -48,82 +53,107 @@ function OurProject() {
       <p className="titles" style={{ color: "#000" }}>
         Our Projects
       </p>
-      <Grid container>
-        <Grid item xs={12} lg={6}>
-          <Box className="project-image">
-            <img src={imageArray[num].image} alt="about" />
-          </Box>
-        </Grid>
-        <Grid item xs={12} lg={6} sx={{ paddingLeft: { xs: "0", lg: "20px" } }}>
-          <p className="project-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-            labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-            labore
-          </p>
-          <Box>
-            <Box
-              sx={{ display: { xs: "none", lg: "flex" } }}
-              className="project-carousel-container"
-            >
-              <div
-                className={
-                  num === 0 ? "project-carousel active" : "project-carousel"
-                }
-              >
-                <img src={projectOne} alt="project" />
-              </div>
-
-              <div
-                className={
-                  num === 1 ? "project-carousel active" : "project-carousel"
-                }
-              >
-                <img src={projectTwo} alt="project" />
-              </div>
-
-              <div
-                className={
-                  num === 2 ? "project-carousel active" : "project-carousel"
-                }
-              >
-                <img src={projectThree} alt="project" />
+      {showcase.length > 0 && (
+        <Grid container>
+          <Grid item xs={12} lg={6}>
+            <Box className="project-image">
+              <img
+                src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[num].images[0].filename}`}
+                alt="about"
+              />
+              <div className="project-image-text">
+                <p className="project-image-text-title">
+                  {showcase[num].textContentRef.title}
+                </p>
+                <span>{showcase[num].textContentRef.description}</span>
               </div>
             </Box>
-            <Box
-              sx={{
-                paddingTop: "15px",
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-            >
-              <div>
-                <ArrowBackIosIcon
-                  sx={{
-                    fontSize: 40,
-                  }}
-                  onClick={handlePrev}
-                />
-
-                <ArrowForwardIosIcon
-                  sx={{ fontSize: 40 }}
-                  onClick={handleNext}
-                />
-              </div>
-              <Button
-                sx={{ background: "black" }}
-                variant="contained"
-                component={NavLink}
-                to="/contact"
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            lg={6}
+            sx={{ paddingLeft: { xs: "0", lg: "20px" } }}
+          >
+            <p className="project-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
+              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore eiusmod tempor
+              incididunt ut labore
+            </p>
+            <Box>
+              <Box
+                sx={{ display: { xs: "none", lg: "flex" } }}
+                className="project-carousel-container"
               >
-                <span>View Project</span>
-                <ArrowForwardIcon sx={{ marginLeft: "10px" }} />
-              </Button>
+                <div
+                  className={
+                    num === 0 ? "project-carousel active" : "project-carousel"
+                  }
+                >
+                  <img
+                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[0].images[0].filename}`}
+                    alt="project"
+                  />
+                </div>
+
+                <div
+                  className={
+                    num === 1 ? "project-carousel active" : "project-carousel"
+                  }
+                >
+                  <img
+                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[1].images[0].filename}`}
+                    alt="project"
+                  />
+                </div>
+
+                <div
+                  className={
+                    num === 2 ? "project-carousel active" : "project-carousel"
+                  }
+                >
+                  <img
+                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[2].images[0].filename}`}
+                    alt="project"
+                  />
+                </div>
+              </Box>
+              <Box
+                sx={{
+                  paddingTop: "15px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div>
+                  <ArrowBackIosIcon
+                    sx={{
+                      fontSize: 40,
+                    }}
+                    onClick={handlePrev}
+                  />
+
+                  <ArrowForwardIosIcon
+                    sx={{ fontSize: 40 }}
+                    onClick={handleNext}
+                  />
+                </div>
+                <Button
+                  sx={{ background: "black" }}
+                  variant="contained"
+                  component={NavLink}
+                  to="/contact"
+                >
+                  <span>View Project</span>
+                  <ArrowForwardIcon sx={{ marginLeft: "10px" }} />
+                </Button>
+              </Box>
             </Box>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      )}
     </Box>
   );
 }
