@@ -4,7 +4,7 @@ import facebook from "./../../assets/image/facebook.png";
 import tiktok from "./../../assets/image/tiktok.png";
 
 import "./contactus.css";
-import axios from "axios";
+import axios from "./../../api/axios";
 import Swal from "sweetalert2";
 
 function ContactUs() {
@@ -29,10 +29,7 @@ function ContactUs() {
     });
 
     try {
-      const res = await axios.post(
-        "https://kkk-pgh0.onrender.com/api/v1/contact-us/submit",
-        data
-      );
+      const res = await axios.post("api/v1/contact-us/submit", data);
       console.log(res);
       Swal.close();
       Swal.fire({

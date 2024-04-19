@@ -28,13 +28,13 @@ function ProjectBanner() {
     <Box>
       <div className="projectbanner">
         <img
-          src={`https://kkk.otastechsolutions.com/api/v1/contents/${image}`}
+          src={`${process.env.REACT_APP_API_URL}/api/v1/contents/${image}`}
           alt="banner"
           className="center"
         />
         <div className="projectbanner-text">
           <p>{project.title}</p>
-          <span>Civil Engineering</span>
+          <span>{project.description}</span>
         </div>
       </div>
     </Box>

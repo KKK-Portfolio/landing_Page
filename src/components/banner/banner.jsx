@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import bannerOne from "./../../assets/image/heroBanner.jpg";
-import bannerTwo from "./../../assets/image/bannertwo.jpg";
 import { Link } from "react-router-dom";
 import "./banner.css";
 import axios from "./../../api/axios";
@@ -31,7 +30,7 @@ function DemoCarousel() {
           <div className="carousel-item" key={item._id}>
             <img
               src={
-                `https://kkk.otastechsolutions.com/api/v1/banners/${item.filename}` ||
+                `${process.env.REACT_APP_API_URL}api/v1/banners/${item.filename}` ||
                 bannerOne
               }
               alt="banner"

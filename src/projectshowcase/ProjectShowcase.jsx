@@ -48,7 +48,7 @@ function ProjectShowcase() {
               >
                 <div className="showcase">
                   <img
-                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${item.images[0].filename}`}
+                    src={`${process.env.REACT_APP_API_URL}api/v1/contents/${item.images[0].filename}`}
                     alt="banner"
                   />
 
