@@ -17,11 +17,8 @@ function WhyToChooseUs() {
           Why to choose Us?
         </p>
         <p className="about-text" style={{ color: "#000" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-          labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-          labore{" "}
+          Contact our Kaung Kaday Kyawl Co,.Ltd for your business and
+          construction project with confidence.
         </p>
         <Grid container spacing={2} sx={{ paddingTop: "50px" }}>
           <Grid item xs={4} md={6} lg={4}>

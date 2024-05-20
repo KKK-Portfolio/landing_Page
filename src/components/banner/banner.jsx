@@ -3,19 +3,42 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import bannerOne from "./../../assets/image/heroBanner.jpg";
 import { Link } from "react-router-dom";
-import "./banner.css";
+import { useQuery } from "react-query";
 import axios from "./../../api/axios";
+import "./banner.css";
 
 function DemoCarousel() {
-  const [data, setData] = React.useState([]);
+  // const [images, setIm] = React.useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios.get("api/v1/banners/images");
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+  const { isLoading, data } = useQuery("banner", () => {
+    return axios.get("api/v1/banners/images");
+  });
+
+  // console.log(isLoading, data.data);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await axios.get("api/v1/banners/images");
+  //     setData(result.data);
+  //   };
+  //   fetchData();
+  // }, []);
+
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          width: "100%",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <div className="banner-container">
@@ -26,7 +49,7 @@ function DemoCarousel() {
         showStatus={false}
         swipeable={false}
       >
-        {data.map((item) => (
+        {data.data.map((item) => (
           <div className="carousel-item" key={item._id}>
             <img
               src={
@@ -41,9 +64,8 @@ function DemoCarousel() {
       </Carousel>
       <div className="carousel-text">
         <p>
-          Now to make dreams come true <br />
-          With the good million company <br />
-          Let's work together
+          Contact our Kaung Kaday Kyawl Co,.Ltd for your business and
+          construction project with confidence.
         </p>
 
         <Link to="/project">

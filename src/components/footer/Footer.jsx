@@ -10,8 +10,7 @@ function Footer() {
         <Grid item xs={12} sm={6} sx={{ padding: { sx: "10px", md: "30px" } }}>
           <p className="texts footer-header">Our office</p>
           <p className="texts address">
-            No. 1, 1st Floor, 6th Street,
-            <br /> Lanmadaw, Yangon
+            တိုင်းတာမင်းကြီးလမ်း, South Dangon, Yangon, Myanmar
           </p>
 
           <div className="map-container">
@@ -19,7 +18,7 @@ function Footer() {
               title="map"
               width="100%"
               height="331px"
-              src="https://maps.google.com/maps?width=100%25&amp;height=231&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(OTAS)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=16%C2%B053'07.5%22N%2096%C2%B014'59.8%22E+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             >
               <a href="https://www.gps.ie/">gps vehicle tracker</a>
             </iframe>
@@ -27,11 +26,10 @@ function Footer() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Box sx={{ padding: { sx: "10px", md: "30px" } }}>
-            <p className="texts footer-header">Logo</p>
+            <p className="texts footer-header">KKK Construction</p>
             <p className="texts address">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore{" "}
+              Transforming visions into reality with expert design, renovation,
+              construction, and steel structure services.
             </p>
             <Grid container>
               <Grid item xs={6} sm={6}>

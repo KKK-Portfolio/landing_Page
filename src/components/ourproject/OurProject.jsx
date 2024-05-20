@@ -53,7 +53,7 @@ function OurProject() {
       <p className="titles" style={{ color: "#000" }}>
         Our Projects
       </p>
-      {showcase.length > 0 && (
+      {showcase && showcase.length > 0 && (
         <Grid container>
           <Grid item xs={12} lg={6}>
             <Box className="project-image">

@@ -25,6 +25,24 @@ function ServiceOffer() {
           xs={12}
           md={6}
           sx={{ marginBottom: "20px" }}
+          onClick={() => navigate("/steel")}
+        >
+          <div className="service-container">
+            <img src={steel} alt="background" />
+            <div className="service">
+              <p className="service-title">Steel Structure</p>
+              <p className="service-text">
+                Experience superior durability and efficiency with our
+                custom-designed steel structures.
+              </p>
+            </div>
+          </div>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ marginBottom: "20px" }}
           onClick={() => navigate("/construction")}
         >
           <div className="service-container">
@@ -32,48 +50,25 @@ function ServiceOffer() {
             <div className="service">
               <p className="service-title">Construction</p>
               <p className="service-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore eiusmod tempo
+                Build with confidence using our reliable construction services,
+                delivering durable and timely results.
               </p>
             </div>
           </div>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ marginBottom: "20px" }}
-          onClick={() => navigate("/design")}
-        >
+        <Grid item xs={12} md={6} sx={{ marginBottom: "20px" }}>
           <div className="service-container">
             <img src={design} alt="background" />
             <div className="service">
               <p className="service-title">Design</p>
               <p className="service-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore eiusmod tempo
+                Build with confidence using our reliable construction services,
+                delivering durable and timely results.
               </p>
             </div>
           </div>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ marginBottom: "20px" }}
-          onClick={() => navigate("/steel")}
-        >
-          <div className="service-container">
-            <img src={steel} alt="background" />
-            <div className="service">
-              <p className="service-title">Steel Production</p>
-              <p className="service-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore eiusmod tempo
-              </p>
-            </div>
-          </div>
-        </Grid>
+
         <Grid
           item
           xs={12}
@@ -86,8 +81,8 @@ function ServiceOffer() {
             <div className="service">
               <p className="service-title">Renovation</p>
               <p className="service-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore eiusmod tempo
+                Revitalize your space with our top-quality renovation services,
+                enhancing functionality and aesthetics.
               </p>
             </div>
           </div>

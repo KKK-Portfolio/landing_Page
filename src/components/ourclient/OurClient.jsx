@@ -32,14 +32,15 @@ function OurClient() {
       >
         <p className="titles">Our Satified Clients</p>
         <p className="about-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-          labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-          labore{" "}
+          At Kaung Kaday Kyawl Co,.Ltd, we deliver exceptional steel structure
+          building, construction, design, and renovation services. Our clients
+          are our top priority, and we work closely with them to bring their
+          visions to life, ensuring every project meets the highest standards of
+          quality.
         </p>
         <Grid container spacing={2} sx={{ paddingTop: "50px" }}>
-          {clients.length > 0 &&
+          {clients &&
+            clients.length > 0 &&
             clients.map((client) => (
               <Grid
                 item
@@ -47,7 +48,7 @@ function OurClient() {
                 // md={2}
                 className="logo"
                 key={client._id}
-                sx={{ background: "red" }}
+                // sx={{ background: "red" }}
               >
                 <img
                   src={`https://kkk.otastechsolutions.com/api/v1/logos/${client.filename}`}

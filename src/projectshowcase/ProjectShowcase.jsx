@@ -9,6 +9,8 @@ function ProjectShowcase() {
   const [showcase, setshowcase] = useState([]);
   const navigate = useNavigate();
 
+  console.log(showcase);
+
   const clickHandler = (id) => {
     navigate(`/project/${id}`);
   };
@@ -16,7 +18,7 @@ function ProjectShowcase() {
   async function fetchShowcase() {
     try {
       const res = await axios.get("api/v1/contents/allContents");
-      console.log(res.data.imageContents);
+      console.log(res.data);
       setshowcase(res.data.imageContents);
     } catch (error) {}
   }
@@ -33,7 +35,7 @@ function ProjectShowcase() {
       }}
     >
       <Grid container spacing={2}>
-        {showcase.length > 0 &&
+        {showcase && showcase.length > 0 ? (
           showcase.map((item) => {
             return (
               <Grid
@@ -59,7 +61,12 @@ function ProjectShowcase() {
                 </div>
               </Grid>
             );
-          })}
+          })
+        ) : (
+          <div style={{ textAlign: "center", width: "100%" }}>
+            <h1>No Projects Found</h1>
+          </div>
+        )}
       </Grid>
     </Box>
   );

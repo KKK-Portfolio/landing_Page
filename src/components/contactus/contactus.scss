@@ -41,7 +41,7 @@
     background-color: #fff;
     width: 100%;
     border-radius: 10px;
-    padding: 20px 20px;
+    padding: 10px 20px;
     margin-bottom: 20px;
     font-family: $PoppinsFont;
     color: #000;
@@ -74,11 +74,17 @@
     box-shadow: none;
     color: #000;
     font-family: $PoppinsFont;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 10px;
     margin: auto;
+    transition: 0.3s;
+  }
+
+  .contact-button:hover {
+    transform: scale(0.95);
+    transition: 0.3s;
   }
 }
 
