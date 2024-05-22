@@ -8,6 +8,7 @@
   font-weight: bold;
   font-size: 20px;
   opacity: 50%;
+  transition: 0.3s;
 }
 
 .nav-link.active {
@@ -15,6 +16,7 @@
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-thickness: 2px;
+  transition: 0.3s;
 }
 
 .contactBtn {
@@ -24,9 +26,18 @@
   border-radius: 5px;
   padding: 10px 15px;
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.contactBtn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(0.95);
+  transition: 0.3s;
 }
 
 .contactBtn.active {
   background-color: #fff;
   color: #000;
+  transition: 0.3s;
 }

@@ -1,8 +1,7 @@
 import { Box, Grid } from "@mui/material";
-import React, { useRef } from "react";
-import facebook from "./../../assets/image/facebook.png";
-import tiktok from "./../../assets/image/telegran.jpeg";
+import React, { useEffect, useRef, useState } from "react";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 import "./contactus.css";
 import axios from "./../../api/axios";
@@ -13,6 +12,26 @@ function ContactUs() {
   const emailref = useRef();
   const phoneref = useRef();
   const messageref = useRef();
+
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [officeNumber, setOfficeNumber] = useState("");
+
+  async function fetchContents() {
+    try {
+      const res = await axios.get("api/v1/about-us");
+      console.log(res.data);
+      setPhoneNumber(res.data.aboutUs[0].phone_number);
+      setOfficeNumber(res.data.aboutUs[0].office_number);
+      // console.log("phone", phoneNumber);
+    } catch (error) {
+      Swal.fire({
+        title: "Error!",
+        text: "Do you want to continue",
+        icon: "error",
+        confirmButtonText: "Cool",
+      });
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,8 +78,12 @@ function ContactUs() {
     }
   };
 
+  useEffect(() => {
+    fetchContents();
+  }, []);
+
   return (
-    <Box sx={{ padding: { xs: "0", md: "50px 100px" }, background: "#E1E1E1" }}>
+    <Box sx={{ padding: { sm: "0", md: "50px 100px" }, background: "#E1E1E1" }}>
       <Grid
         container
         sx={{
@@ -79,36 +102,50 @@ function ContactUs() {
             alignItems: "center",
           }}
         >
-          <div className="contact-container">
+          <Box
+            className="contact-container"
+            sx={{
+              padding: { xs: "0 20px", md: "0px 50px", lg: "0px 100px" },
+            }}
+          >
             <p className="text contact-header ">Contact Us</p>
             <span className="text contact-text">
               Our experts are just a call or email away. We look forward to
               discussing how we can support your next steel structure, building,
               or renovation project.
             </span>
-            <p className="text contact-number">09 42 3623 353</p>
+            <Box sx={{ padding: "10px 0" }}>
+              <p className="text contact-number">{phoneNumber}</p>
+              <p className="text contact-number">{officeNumber}</p>
+            </Box>
             <span className="text contact-text">Follow us on Social Media</span>
             <div>
               <a href="https://www.facebook.com/kaungkadaykyawl">
-                <img src={facebook} alt="facebook" />
+                <FacebookIcon sx={{ color: "#007fff", fontSize: "35px" }} />
               </a>
               <a href="http://t.me/kaungkadaykyawl">
-                <TelegramIcon sx={{ color: "#007fff" }} />
+                <TelegramIcon sx={{ color: "#007fff", fontSize: "35px" }} />
               </a>
             </div>
-          </div>
+          </Box>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <form className="contact-form">
-            <input type="text" placeholder="Company Name" ref={nameref} />
-            <input type="email" placeholder="Email" ref={emailref} />
-            <input type="text" placeholder="Phone Number" ref={phoneref} />
-            <textarea placeholder="Message" rows="5" ref={messageref} />
+          <Box
+            sx={{
+              padding: { xs: "0 20px", md: "0px 50px", lg: "0px 100px" },
+            }}
+          >
+            <form className="contact-form">
+              <input type="text" placeholder="Company Name" ref={nameref} />
+              <input type="email" placeholder="Email" ref={emailref} />
+              <input type="text" placeholder="Phone Number" ref={phoneref} />
+              <textarea placeholder="Message" rows="5" ref={messageref} />
 
-            <button className="contact-button" onClick={handleSubmit}>
-              Contact Us
-            </button>
-          </form>
+              <button className="contact-button" onClick={handleSubmit}>
+                Contact Us
+              </button>
+            </form>
+          </Box>
         </Grid>
       </Grid>
     </Box>

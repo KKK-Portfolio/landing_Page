@@ -5,9 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Avatar, Box, Grid } from "@mui/material";
-import personOne from "./../../assets/image/personOne.png";
-import personTwo from "./../../assets/image/personTwo.png";
+import { Avatar, Box } from "@mui/material";
 import axios from "./../../api/axios";
 
 function Testmonial() {
@@ -23,7 +21,7 @@ function Testmonial() {
     }
   }
 
-  console.log(testmonials);
+  // console.log(testmonials);
 
   useEffect(() => {
     fetchTestmonials();
@@ -52,7 +50,7 @@ function Testmonial() {
                 <div className="avater-container">
                   <Avatar
                     alt="Remy Sharp"
-                    src={`https://kkk.otastechsolutions.com/api/v1/testimonials/${testmonial.profile.filename}`}
+                    src={`${process.env.REACT_APP_API_URL}api/v1/testimonials/${testmonial.profile.filename}`}
                     sx={{ width: 75, height: 75, marginRight: "20px" }}
                   />
                   <div>

@@ -15,7 +15,7 @@ function OurProject() {
   async function fetchShowcase() {
     try {
       const res = await axios.get("api/v1/contents/allContents");
-      // console.log(res.data.imageContents);
+      console.log(res.data.imageContents);
       setshowcase(res.data.imageContents);
     } catch (error) {}
   }
@@ -45,7 +45,7 @@ function OurProject() {
   return (
     <Box
       sx={{
-        padding: { xs: "20px", lg: "50px 100px" },
+        padding: { xs: "20px", md: "50px 100px" },
         background: "#ffffff",
         // display: { xs: "none", lg: "block" },
       }}
@@ -58,7 +58,7 @@ function OurProject() {
           <Grid item xs={12} lg={6}>
             <Box className="project-image">
               <img
-                src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[num].images[0].filename}`}
+                src={`${process.env.REACT_APP_API_URL}api/v1/contents/${showcase[num].images[0].filename}`}
                 alt="about"
               />
               <div className="project-image-text">
@@ -76,15 +76,17 @@ function OurProject() {
             sx={{ paddingLeft: { xs: "0", lg: "20px" } }}
           >
             <p className="project-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore eiusmod tempor
-              incididunt ut labore
+              At Kaung Kaday Kyawl Construction Company, we pride ourselves on
+              delivering exceptional construction projects that stand as a
+              testament to our commitment to quality, innovation, and client
+              satisfaction
             </p>
             <Box>
               <Box
-                sx={{ display: { xs: "none", lg: "flex" } }}
+                sx={{
+                  display: { xs: "none", lg: "flex" },
+                  justifyContent: "space-between",
+                }}
                 className="project-carousel-container"
               >
                 <div
@@ -93,7 +95,7 @@ function OurProject() {
                   }
                 >
                   <img
-                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[0].images[0].filename}`}
+                    src={`${process.env.REACT_APP_API_URL}api/v1/contents/${showcase[0].images[0].filename}`}
                     alt="project"
                   />
                 </div>
@@ -104,7 +106,7 @@ function OurProject() {
                   }
                 >
                   <img
-                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[1].images[0].filename}`}
+                    src={`${process.env.REACT_APP_API_URL}api/v1/contents/${showcase[1].images[0].filename}`}
                     alt="project"
                   />
                 </div>
@@ -115,7 +117,7 @@ function OurProject() {
                   }
                 >
                   <img
-                    src={`https://kkk.otastechsolutions.com/api/v1/contents/${showcase[2].images[0].filename}`}
+                    src={`${process.env.REACT_APP_API_URL}api/v1/contents/${showcase[2].images[0].filename}`}
                     alt="project"
                   />
                 </div>

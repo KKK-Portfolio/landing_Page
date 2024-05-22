@@ -51,7 +51,7 @@ function OurClient() {
                 // sx={{ background: "red" }}
               >
                 <img
-                  src={`https://kkk.otastechsolutions.com/api/v1/logos/${client.filename}`}
+                  src={`${process.env.REACT_APP_API_URL}api/v1/logos/${client.filename}`}
                   alt="client"
                 />
               </Grid>

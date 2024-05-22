@@ -13,7 +13,7 @@ function ProjectBanner() {
   async function fetchShowcase() {
     try {
       const res = await axios.get(`api/v1/contents/${id}`);
-      // console.log(res.data.imageContent.images[0].filename);
+      console.log(res.data.imageContent.images[0].filename);
       // setshowcase(res.data.imageContents);
       setImage(res.data.imageContent.images[0].filename);
       setProject(res.data.imageContent.textContentRef);
@@ -28,7 +28,7 @@ function ProjectBanner() {
     <Box>
       <div className="projectbanner">
         <img
-          src={`${process.env.REACT_APP_API_URL}/api/v1/contents/${image}`}
+          src={`${process.env.REACT_APP_API_URL}api/v1/contents/${image}`}
           alt="banner"
           className="center"
         />

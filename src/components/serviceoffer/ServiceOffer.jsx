@@ -56,7 +56,13 @@ function ServiceOffer() {
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} md={6} sx={{ marginBottom: "20px" }}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ marginBottom: "20px" }}
+          onClick={() => navigate("/design")}
+        >
           <div className="service-container">
             <img src={design} alt="background" />
             <div className="service">

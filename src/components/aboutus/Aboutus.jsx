@@ -48,18 +48,17 @@ function Aboutus() {
         </Grid>
         <Grid item xs={12} lg={6}>
           <p className="about-text">
-            Since 2005, KAUNG KADAY KWAL has been a proud player in Myanmar's
-            construction industry. Founded by [Founders' Names], driven by the
-            vision of [Vision Statement], we've steadily grown into a company
-            known for its [Values and Qualities]. Over the years, we've had the
-            privilege of working on landmark projects like [Mention Major
-            Projects]. Each project has been a testament to our commitment to
-            [Values and Commitments]. We're especially proud of [Achievements
-            and Awards]. As a local company, we understand the unique needs and
-            challenges of the Myanmar construction landscape. We prioritize
-            using local materials and labor, fostering strong relationships with
-            communities, and contributing to the sustainable development of the
-            industry.
+            Founded in 2018 by U Ye Htun, Kaung Kaday Kyawl Co., Ltd has quickly
+            become a respected name in the steel structure and construction
+            industry. Our company is dedicated to providing top-quality
+            services, focusing on delivering innovative solutions and superior
+            craftsmanship in every project we undertake. From our inception, we
+            have maintained a commitment to excellence that has allowed us to
+            successfully complete over 100 projects. This achievement is a
+            testament to our team's hard work, dedication, and unwavering focus
+            on meeting the needs of our clients. Our portfolio includes a
+            diverse range of projects, each reflecting our expertise and
+            attention to detail.
           </p>
         </Grid>
       </Grid>

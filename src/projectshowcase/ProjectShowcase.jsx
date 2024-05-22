@@ -7,6 +7,7 @@ import "./projetcshowcase.css";
 
 function ProjectShowcase() {
   const [showcase, setshowcase] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   console.log(showcase);
@@ -20,12 +21,27 @@ function ProjectShowcase() {
       const res = await axios.get("api/v1/contents/allContents");
       console.log(res.data);
       setshowcase(res.data.imageContents);
+      setLoading(false);
     } catch (error) {}
   }
 
   useEffect(() => {
     fetchShowcase();
   }, []);
+
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          padding: { xs: "30px 10px", md: "50px 100px" },
+          background: "#ffffff",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ fontSize: "24px", fontWeight: "bold" }}>Loading...</p>
+      </Box>
+    );
+  }
 
   return (
     <Box

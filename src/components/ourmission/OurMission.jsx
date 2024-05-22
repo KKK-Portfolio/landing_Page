@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Box, Grid } from "@mui/material";
-import about from "./../../assets/image/about.avif";
-import mission from "./../../assets/image/mission.avif";
-import vision from "./../../assets/image/vision.avif";
 import axiso from "./../../api/axios.js";
 
 import "./ourmissin.css";

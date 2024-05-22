@@ -10,7 +10,7 @@
   width: 800px;
   height: 800px;
   border-radius: 50%;
-  background-color: red;
+  // background-color: red;
 
   position: absolute;
   right: -10%;
@@ -48,10 +48,11 @@
 }
 
 .about-contact-text p {
-  font-size: 32px;
+  font-size: 28px;
   font-family: $PoppinsFont;
   color: black;
   font-weight: bold;
+  text-shadow: 0px 0px 5px #fff;
 }
 
 .about-contact-text button {
@@ -66,7 +67,7 @@
   border: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .circle-image {
     width: 400px;
     height: 400px;

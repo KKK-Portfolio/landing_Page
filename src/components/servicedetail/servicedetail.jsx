@@ -15,6 +15,43 @@ function Servicedetail() {
       <Grid
         container
         sx={{ borderRadius: "20px", overflow: "hidden" }}
+        onClick={() => navigate("/steel")}
+      >
+        <Grid item xs={12} md={6} lg={6}>
+          <div className="servicedetail">
+            <img src={steel} alt="construction" />
+          </div>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          sx={{
+            background: "#1C1C1C",
+            padding: { xs: "10px", md: "10px 50px" },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div className="servicedetail-text">
+            <p>Steel Structure</p>
+            <span>
+              Experience superior durability and efficiency with our
+              custom-designed steel structures.
+            </span>
+          </div>
+        </Grid>
+      </Grid>
+      {/* -------------------- */}
+      <Grid
+        container
+        sx={{
+          borderRadius: "20px",
+          overflow: "hidden",
+          marginY: { xs: "30px", md: "50px" },
+        }}
         onClick={() => navigate("/construction")}
       >
         <Grid item xs={12} md={6} lg={6}>
@@ -38,11 +75,8 @@ function Servicedetail() {
           <div className="servicedetail-text">
             <p>Construction</p>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore eiusmod tempor
-              incididunt ut labore incididunt ut labore Lorem ipsum dolor
+              Build with confidence using our reliable construction services,
+              delivering durable and timely results.
             </span>
           </div>
         </Grid>
@@ -78,52 +112,14 @@ function Servicedetail() {
           <div className="servicedetail-text">
             <p>Design</p>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore eiusmod tempor
-              incididunt ut labore incididunt ut labore Lorem ipsum dolor
+              Transform your vision into reality with our innovative and
+              practical design solutions.
             </span>
           </div>
         </Grid>
       </Grid>
       {/* -------------------- */}
-      <Grid
-        container
-        sx={{ borderRadius: "20px", overflow: "hidden" }}
-        onClick={() => navigate("/steel")}
-      >
-        <Grid item xs={12} md={6} lg={6}>
-          <div className="servicedetail">
-            <img src={steel} alt="construction" />
-          </div>
-        </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          lg={6}
-          sx={{
-            background: "#1C1C1C",
-            padding: { xs: "10px", md: "10px 50px" },
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div className="servicedetail-text">
-            <p>Steel Production</p>
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore eiusmod tempor
-              incididunt ut labore incididunt ut labore Lorem ipsum dolor
-            </span>
-          </div>
-        </Grid>
-      </Grid>
-      {/* -------------------- */}
+
       <Grid
         container
         sx={{
@@ -154,11 +150,8 @@ function Servicedetail() {
           <div className="servicedetail-text">
             <p>Renovation</p>
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore eiusmod tempor incididunt ut
-              labore Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore eiusmod tempor
-              incididunt ut labore incididunt ut labore Lorem ipsum dolor
+              Revitalize your space with our top-quality renovation services,
+              enhancing functionality and aesthetics.
             </span>
           </div>
         </Grid>

@@ -109,7 +109,7 @@ function ProjectNumber() {
           <div className="project-number">
             <img src={year} alt="finished" />
             <p className="number">
-              <Number n={8} />
+              <Number n={years} />
             </p>
             <p className="text">Year of Experience</p>
           </div>
