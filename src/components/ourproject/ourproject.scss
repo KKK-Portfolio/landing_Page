@@ -2,7 +2,7 @@
 
 .project-image {
   width: 100%;
-  height: 700px;
+  height: 500px;
 
   border-radius: 10px;
   overflow: hidden;
@@ -50,7 +50,7 @@
 }
 
 .project-text {
-  font-size: 24px;
+  font-size: 20px;
   color: #000;
   font-weight: 700;
   margin-top: 0;
@@ -71,10 +71,11 @@
 
 .project-carousel {
   width: 200px;
-  height: 365px;
+  height: 300px;
   margin-top: 30px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
 .project-carousel.active {
@@ -82,8 +83,9 @@
 }
 
 .project-carousel img {
-  width: inherit;
+  width: 500px;
   height: inherit;
+  position: absolute;
 }
 
 .project-btn {

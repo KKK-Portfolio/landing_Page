@@ -1,9 +1,22 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./footer.css";
 
 function Footer() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const navlink = [
+    { name: "Home", path: "/" },
+    { name: "Service", path: "/service" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+    { name: "Project", path: "/project" },
+  ];
+  const goHome = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <Box sx={{ padding: { xs: "20px", md: "0 100px" }, background: "#1C1C1C" }}>
       <Grid container>
@@ -32,21 +45,54 @@ function Footer() {
               construction, and steel structure services.
             </p>
             <Grid container>
-              <Grid item xs={6} sm={6}>
-                <span className="texts link">Home</span>
+              {navlink.map((link) => (
+                <Grid item xs={6} sm={6} key={link.name}>
+                  <span
+                    className="texts link"
+                    onClick={
+                      link.path === location.pathname
+                        ? goHome
+                        : () => navigate(link.path)
+                    }
+                  >
+                    {link.name}
+                  </span>
+                </Grid>
+              ))}
+              {/* <Grid item xs={6} sm={6}>
+                <span className="texts link" onClick={goHome}>
+                  Home
+                </span>
               </Grid>
               <Grid item xs={6} sm={6}>
-                <span className="texts link">Service</span>
+                <span
+                  className="texts link"
+                  onClick={() => navigate("/service")}
+                >
+                  Service
+                </span>
               </Grid>
               <Grid item xs={6} sm={6}>
-                <span className="texts link">About Us</span>
+                <span className="texts link" onClick={() => navigate("/about")}>
+                  About Us
+                </span>
               </Grid>
               <Grid item xs={6} sm={6}>
-                <span className="texts link">Contact</span>
+                <span
+                  className="texts link"
+                  onClick={() => navigate("/contact")}
+                >
+                  Contact
+                </span>
               </Grid>
               <Grid item xs={6} sm={6}>
-                <span className="texts link">Project</span>
-              </Grid>
+                <span
+                  className="texts link"
+                  onClick={() => navigate("/service")}
+                >
+                  Project
+                </span>
+              </Grid> */}
             </Grid>
           </Box>
         </Grid>

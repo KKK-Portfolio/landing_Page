@@ -45,8 +45,8 @@ function Testmonial() {
       >
         {testmonials.length > 0 &&
           testmonials.map((testmonial) => (
-            <SwiperSlide>
-              <Box sx={{ padding: "30px 50px" }} key={testmonial._id}>
+            <SwiperSlide key={testmonial._id}>
+              <Box sx={{ padding: "30px 50px" }}>
                 <div className="avater-container">
                   <Avatar
                     alt="Remy Sharp"

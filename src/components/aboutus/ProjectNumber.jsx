@@ -59,7 +59,7 @@ function ProjectNumber() {
   async function fetchYearNumbers() {
     try {
       const res = await axios.get("api/v1/achievements/year");
-      console.log(res.data.achievementDetails[0].companyExperienceYears);
+      // console.log(res.data.achievementDetails[0].companyExperienceYears);
       setYears(res.data.achievementDetails[0].companyExperienceYears);
     } catch (error) {
       console.log(error);
@@ -84,6 +84,7 @@ function ProjectNumber() {
             <img src={finished} alt="finished" />
             <p className="number">
               <Number n={project} />
+              <span>+</span>
             </p>
             <p className="text">Finished Projects</p>
           </div>

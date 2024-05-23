@@ -52,13 +52,14 @@ function Aboutus() {
             become a respected name in the steel structure and construction
             industry. Our company is dedicated to providing top-quality
             services, focusing on delivering innovative solutions and superior
-            craftsmanship in every project we undertake. From our inception, we
-            have maintained a commitment to excellence that has allowed us to
-            successfully complete over 100 projects. This achievement is a
-            testament to our team's hard work, dedication, and unwavering focus
-            on meeting the needs of our clients. Our portfolio includes a
-            diverse range of projects, each reflecting our expertise and
-            attention to detail.
+            craftsmanship in every project we undertake.
+            <br />
+            From our inception, we have maintained a commitment to excellence
+            that has allowed us to successfully complete over 100 projects. This
+            achievement is a testament to our team's hard work, dedication, and
+            unwavering focus on meeting the needs of our clients. Our portfolio
+            includes a diverse range of projects, each reflecting our expertise
+            and attention to detail.
           </p>
         </Grid>
       </Grid>

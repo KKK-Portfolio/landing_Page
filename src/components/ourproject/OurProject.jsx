@@ -15,7 +15,7 @@ function OurProject() {
   async function fetchShowcase() {
     try {
       const res = await axios.get("api/v1/contents/allContents");
-      console.log(res.data.imageContents);
+      // console.log(res.data.imageContents);
       setshowcase(res.data.imageContents);
     } catch (error) {}
   }
@@ -55,7 +55,7 @@ function OurProject() {
       </p>
       {showcase && showcase.length > 0 && (
         <Grid container>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} lg={5}>
             <Box className="project-image">
               <img
                 src={`${process.env.REACT_APP_API_URL}api/v1/contents/${showcase[num].images[0].filename}`}
@@ -72,7 +72,7 @@ function OurProject() {
           <Grid
             item
             xs={12}
-            lg={6}
+            lg={7}
             sx={{ paddingLeft: { xs: "0", lg: "20px" } }}
           >
             <p className="project-text">
@@ -133,12 +133,22 @@ function OurProject() {
                   <ArrowBackIosIcon
                     sx={{
                       fontSize: 40,
+                      cursor: "pointer",
+                      "&:hover": {
+                        transform: "scale(0.95)",
+                      },
                     }}
                     onClick={handlePrev}
                   />
 
                   <ArrowForwardIosIcon
-                    sx={{ fontSize: 40 }}
+                    sx={{
+                      fontSize: 40,
+                      cursor: "pointer",
+                      "&:hover": {
+                        transform: "scale(0.95)",
+                      },
+                    }}
                     onClick={handleNext}
                   />
                 </div>
@@ -146,7 +156,7 @@ function OurProject() {
                   sx={{ background: "black" }}
                   variant="contained"
                   component={NavLink}
-                  to="/contact"
+                  to="/project"
                 >
                   <span>View Project</span>
                   <ArrowForwardIcon sx={{ marginLeft: "10px" }} />

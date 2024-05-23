@@ -14,17 +14,18 @@ function ServiceOffer() {
     <Box sx={{ padding: { xs: "20px", md: "50px 100px" }, background: "#fff" }}>
       <p className="titles">Services We Offered</p>
       <p className="about-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore eiusmod tempor incididunt ut labore Lorem
-        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore eiusmod tempor incididunt ut labore{" "}
+        At KaungKadayKyawl Construction, we provide a wide range of construction
+        services tailored to meet the unique needs of our clients. Our team of
+        experts is dedicated to delivering exceptional quality and ensuring your
+        project is completed on time and within budget. Explore our diverse
+        service offerings below
       </p>
       <Grid container>
         <Grid
           item
           xs={12}
           md={6}
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", cursor: "pointer" }}
           onClick={() => navigate("/steel")}
         >
           <div className="service-container">
@@ -42,7 +43,7 @@ function ServiceOffer() {
           item
           xs={12}
           md={6}
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", cursor: "pointer" }}
           onClick={() => navigate("/construction")}
         >
           <div className="service-container">
@@ -60,7 +61,7 @@ function ServiceOffer() {
           item
           xs={12}
           md={6}
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", cursor: "pointer" }}
           onClick={() => navigate("/design")}
         >
           <div className="service-container">
@@ -79,7 +80,7 @@ function ServiceOffer() {
           item
           xs={12}
           md={6}
-          sx={{ marginBottom: "20px" }}
+          sx={{ marginBottom: "20px", cursor: "pointer" }}
           onClick={() => navigate("/renovation")}
         >
           <div className="service-container">

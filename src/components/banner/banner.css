@@ -30,6 +30,7 @@
   position: absolute;
   top: 40%;
   left: 100px;
+  right: 100px;
 }
 
 .banner-btn {
@@ -48,6 +49,9 @@
 }
 
 @media screen and (max-width: 992px) {
+  .carousel-item {
+    height: 50vh;
+  }
   .carousel-item img {
     width: inherit;
     height: inherit;
@@ -71,6 +75,7 @@
   .carousel-text {
     font-size: 16px;
     left: 50px;
+    right: 50px;
   }
   .banner-btn {
     font-size: 12px;

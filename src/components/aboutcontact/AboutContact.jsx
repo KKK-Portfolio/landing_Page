@@ -10,7 +10,7 @@ function AboutContact() {
       sx={{
         paddingLeft: { sx: "10px", md: "100px" },
         paddingBottom: "16px",
-        backgroundColor: "#fff",
+        // backgroundColor: "red",
       }}
     >
       <div className="about-contact-container">

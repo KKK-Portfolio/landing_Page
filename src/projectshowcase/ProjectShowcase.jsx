@@ -59,6 +59,7 @@ function ProjectShowcase() {
                 xs={12}
                 md={6}
                 lg={4}
+                sx={{ cursor: "pointer" }}
                 onClick={() => {
                   clickHandler(item.textContentRef._id);
                 }}

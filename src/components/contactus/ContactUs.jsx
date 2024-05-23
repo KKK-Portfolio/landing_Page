@@ -62,6 +62,7 @@ function ContactUs() {
       });
       nameref.current.value = "";
       emailref.current.value = "";
+      phoneNumber.current.value = "";
       messageref.current.value = "";
     } catch (error) {
       console.log(error);
@@ -132,7 +133,7 @@ function ContactUs() {
         <Grid item xs={12} sm={6}>
           <Box
             sx={{
-              padding: { xs: "0 20px", md: "0px 50px", lg: "0px 100px" },
+              padding: { xs: "20px", md: "0px 50px", lg: "0px 100px" },
             }}
           >
             <form className="contact-form">
