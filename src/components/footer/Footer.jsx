@@ -23,7 +23,8 @@ function Footer() {
         <Grid item xs={12} sm={6} sx={{ padding: { sx: "10px", md: "30px" } }}>
           <p className="texts footer-header">Our office</p>
           <p className="texts address">
-            တိုင်းတာမင်းကြီးလမ်း, South Dangon, Yangon, Myanmar
+            အမှတ်(၈၆)၊ ၁၄၄ရပ်ကွက်၊ တိုင်းတာမင်းကြီးလမ်း၊ <br />
+            ဒဂုံမြို့သစ်တောင်ပိုင်း၊ ရန်ကုန်
           </p>
 
           <div className="map-container">
@@ -48,7 +49,7 @@ function Footer() {
               {navlink.map((link) => (
                 <Grid item xs={6} sm={6} key={link.name}>
                   <span
-                    className="texts link"
+                    className="link texts"
                     onClick={
                       link.path === location.pathname
                         ? goHome

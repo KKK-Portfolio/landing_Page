@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import circle from "./../../assets/image/circle.avif";
 
 import "./aboutcontact.css";
+import { NavLink } from "react-router-dom";
 
 function AboutContact() {
   return (
@@ -29,7 +30,9 @@ function AboutContact() {
             <br />
             Let's work together
           </p>
-          <button>Contact Us</button>
+          <NavLink to="/contact">
+            <button>Contact Us</button>
+          </NavLink>
         </Box>
 
         <Box
@@ -40,7 +43,9 @@ function AboutContact() {
             Now to make dreams come true With the good million compan Let's work
             together
           </p>
-          <button>Contact Us</button>
+          <NavLink to="/contact">
+            <button>Contact Us</button>
+          </NavLink>
         </Box>
       </div>
     </Box>

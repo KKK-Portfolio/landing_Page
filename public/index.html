@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Kaung Kaday Kyawl Construction" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -29,14 +26,6 @@
       body {
         background-color: black;
       }
-      .loading {
-        -webkit-animation: sk-scaleout 1s infinite ease-in-out;
-        animation: sk-scaleout 1s infinite ease-in-out;
-        /* background-color: #124c62; */
-        border-radius: 100%;
-        height: 6em;
-        width: 6em;
-      }
 
       .container {
         align-items: center;
@@ -47,15 +36,18 @@
         /* width: 100vw; */
       }
 
-      @keyframes sk-scaleout {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        }
+      /* HTML: <div class="loader"></div> */
+      .loading {
+        width: 90px;
+        height: 14px;
+        box-shadow: 0 3px 0 #fff;
+        background: repeating-linear-gradient(90deg, #fff 0 14px, #0000 0 100%)
+          0 0 / calc(100% / 4) 100%;
+        animation: l1 1s infinite linear;
+      }
+      @keyframes l1 {
         100% {
-          -webkit-transform: scale(1);
-          opacity: 0.5;
-          transform: scale(1);
+          background-position: calc(100% / 3) 0;
         }
       }
     </style>
@@ -66,9 +58,7 @@
 
     <div id="root">
       <div id="spinner" class="container">
-        <div class="loading">
-          <img src="logo.png" />
-        </div>
+        <div class="loading"></div>
         <!-- <img src="applogo.gif" /> -->
       </div>
     </div>
@@ -84,3 +74,7 @@
     -->
   </body>
 </html>
+
+/* HTML:
+<div class="loader"></div>
+*/

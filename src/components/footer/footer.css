@@ -19,10 +19,13 @@
   margin: 10px 0;
   display: block;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .link:hover {
-  transform: scale(0.95);
+  transform: translateY(-5px);
+  color: #007fff;
+  transition: 0.3s;
 }
 
 .map-container {

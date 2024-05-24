@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import bannerOne from "./../../assets/image/kkk-heroBanner.jpg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useQuery } from "react-query";
 import axios from "./../../api/axios";
 import "./banner.css";
@@ -71,9 +71,13 @@ function DemoCarousel() {
           construction project with confidence.
         </p>
 
-        <Link to="/project">
-          <button className="banner-btn">View Our Projects</button>
-        </Link>
+        <NavLink
+          to="/project"
+          className="banner-btn"
+          style={{ textDecoration: "none", color: "#fff" }}
+        >
+          View Our Projects
+        </NavLink>
       </div>
     </div>
   );

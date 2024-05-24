@@ -19,18 +19,11 @@ function ContactUs() {
   async function fetchContents() {
     try {
       const res = await axios.get("api/v1/about-us");
-      console.log(res.data);
+      // console.log(res.data);
       setPhoneNumber(res.data.aboutUs[0].phone_number);
       setOfficeNumber(res.data.aboutUs[0].office_number);
       // console.log("phone", phoneNumber);
-    } catch (error) {
-      Swal.fire({
-        title: "Error!",
-        text: "Do you want to continue",
-        icon: "error",
-        confirmButtonText: "Cool",
-      });
-    }
+    } catch (error) {}
   }
 
   const handleSubmit = async (e) => {
@@ -58,18 +51,18 @@ function ContactUs() {
         title: "Good job!",
         icon: "success",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 3000,
       });
       nameref.current.value = "";
       emailref.current.value = "";
-      phoneNumber.current.value = "";
+      phoneref.current.value = "";
       messageref.current.value = "";
     } catch (error) {
       console.log(error);
       Swal.close();
       Swal.fire({
         icon: "error",
-        title: error.response.data.message,
+        title: "Oops...",
         allowOutsideClick: false,
         // showConfirmButton: false,
         onBeforeOpen: () => {
@@ -116,8 +109,13 @@ function ContactUs() {
               or renovation project.
             </span>
             <Box sx={{ padding: "10px 0" }}>
-              <p className="text contact-number">{phoneNumber}</p>
-              <p className="text contact-number">{officeNumber}</p>
+              <a href={`tel:+${phoneNumber}`} className="text contact-number">
+                {phoneNumber}
+              </a>
+              <br />
+              <a href={`tel:+${officeNumber}`} className="text contact-number">
+                {officeNumber}
+              </a>
             </Box>
             <span className="text contact-text">Follow us on Social Media</span>
             <div>

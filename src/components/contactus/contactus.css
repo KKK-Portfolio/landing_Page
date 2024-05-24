@@ -22,6 +22,11 @@
 
 .contact-number {
   font-size: 32px;
+  text-decoration: none;
+}
+
+.contact-number:hover {
+  color: #007fff;
 }
 
 .contact-container a {
@@ -80,6 +85,7 @@
   border-radius: 10px;
   margin: auto;
   transition: 0.3s;
+  cursor: pointer;
 }
 .contact-form .contact-button:hover {
   transform: scale(0.95);
@@ -92,6 +98,21 @@
   }
   .contact-form {
     padding: 0px 10px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 10px;
+  }
+  .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+    font-size: 10px;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    font-size: 10px;
+  }
+  .contact-form .contact-button {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -113,6 +134,7 @@
   .contact-form input,
   .contact-form textarea {
     padding: 10px;
+    font-size: 10px;
   }
   .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
     font-size: 10px;
