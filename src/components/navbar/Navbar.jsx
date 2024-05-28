@@ -71,7 +71,7 @@ function Navbar(props) {
         <motion.div
           initial={{ background: "transparent" }}
           animate={{
-            background: scrollY > 300 ? "#000" : "transparent",
+            background: scrollY > 150 ? "#000" : "transparent",
           }}
           transition={{ duration: 1, ease: "easeInOut" }}
           style={{ padding: { xs: "20px", md: "10px 80px" } }}
