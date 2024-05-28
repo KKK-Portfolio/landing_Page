@@ -11,7 +11,7 @@ function OurClient() {
   async function fetchClients() {
     try {
       const res = await axios.get("api/v1/logos/getAll");
-      // console.log(res.data);
+      console.log(res.data);
       setClients(res.data);
     } catch (error) {
       console.log(error);
@@ -48,7 +48,10 @@ function OurClient() {
                 // md={2}
                 className="logo"
                 key={client._id}
-                // sx={{ background: "red" }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(client.url);
+                }}
               >
                 <img
                   src={`${process.env.REACT_APP_API_URL}api/v1/logos/${client.filename}`}

@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
-import circle from "./../../assets/image/connectproject.avif";
+import circle from "./../../assets/image/connectproject.jpg";
 import { NavLink } from "react-router-dom";
+import "./../companyinfo/companyinfo.css";
 
 function ConnectProject() {
   return (

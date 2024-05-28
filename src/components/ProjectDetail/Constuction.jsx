@@ -2,9 +2,11 @@ import { Box, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import axios from "./../../api/axios";
 import { useNavigate } from "react-router-dom";
+import "./../companyinfo/companyinfo.css";
 
 function Construction() {
   const [showcase, setshowcase] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   const getprojects = async () => {
     try {
@@ -12,8 +14,9 @@ function Construction() {
       const projects = res.data.imageContents.filter(
         (item) => item.textContentRef.category === "Construction"
       );
-      console.log(projects);
+      // console.log(projects);
       setshowcase(projects);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -26,6 +29,20 @@ function Construction() {
   const clickHandler = (id) => {
     navigate(`/project/${id}`);
   };
+
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          padding: { xs: "30px 10px", md: "50px 100px" },
+          background: "#ffffff",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ fontSize: "24px", fontWeight: "bold" }}>Loading...</p>
+      </Box>
+    );
+  }
 
   return (
     <Box>

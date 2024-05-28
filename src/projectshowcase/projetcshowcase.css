@@ -21,6 +21,8 @@
 .showcase img {
   width: inherit;
   height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .showcase-text {

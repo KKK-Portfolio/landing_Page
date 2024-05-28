@@ -17,6 +17,7 @@ function ProjectBanner() {
       // setshowcase(res.data.imageContents);
       setImage(res.data.imageContent.images[0].filename);
       setProject(res.data.imageContent.textContentRef);
+      // console.log(project);
     } catch (error) {}
   }
 
@@ -35,6 +36,7 @@ function ProjectBanner() {
         <div className="projectbanner-text">
           <p>{project.title}</p>
           <span>{project.description}</span>
+          <span>{project.type}</span>
         </div>
       </div>
     </Box>

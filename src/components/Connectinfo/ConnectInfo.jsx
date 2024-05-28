@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
-import connectinfo from "./../../assets/image/connectinfo.avif";
+import connectinfo from "./../../assets/image/connectinfo.jpg";
+import "./../companyinfo/companyinfo.css";
 
 function ConnectInfo() {
   return (

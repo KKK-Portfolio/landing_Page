@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 import React, { useEffect } from "react";
-import aboutOne from "./../../assets/image/aboutusOne.avif";
-import aboutTwo from "./../../assets/image/aboutusTwo.avif";
+import aboutOne from "./../../assets/image/abone.jpg";
+import aboutTwo from "./../../assets/image/aboutusTwo.jpg";
 import ProjectNumber from "./ProjectNumber";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -30,15 +30,10 @@ function Aboutus() {
           lg={6}
           sx={{ paddingRight: { xs: "0", md: "20px" } }}
         >
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-            className="about-image"
-          >
+          <div className="about-image">
             <img src={aboutOne} alt="about" />
-          </motion.div>
+          </div>
+
           <Box
             sx={{ display: { xs: "none", lg: "block" } }}
             className="about-image"
@@ -47,20 +42,22 @@ function Aboutus() {
           </Box>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <p className="about-text">
-            Founded in 2018 by U Ye Htun, Kaung Kaday Kyawl Co., Ltd has quickly
-            become a respected name in the steel structure and construction
-            industry. Our company is dedicated to providing top-quality
-            services, focusing on delivering innovative solutions and superior
-            craftsmanship in every project we undertake.
-            <br />
-            From our inception, we have maintained a commitment to excellence
-            that has allowed us to successfully complete over 100 projects. This
-            achievement is a testament to our team's hard work, dedication, and
-            unwavering focus on meeting the needs of our clients. Our portfolio
-            includes a diverse range of projects, each reflecting our expertise
-            and attention to detail.
-          </p>
+          <Box>
+            <p className="about-text">
+              Founded in 2018 by U Ye Htun, Kaung Kaday Kyawl Co., Ltd has
+              quickly become a respected name in the steel structure and
+              construction industry. Our company is dedicated to providing
+              top-quality services, focusing on delivering innovative solutions
+              and superior craftsmanship in every project we undertake.
+              <br />
+              From our inception, we have maintained a commitment to excellence
+              that has allowed us to successfully complete over 100 projects.
+              This achievement is a testament to our team's hard work,
+              dedication, and unwavering focus on meeting the needs of our
+              clients. Our portfolio includes a diverse range of projects, each
+              reflecting our expertise and attention to detail.
+            </p>
+          </Box>
         </Grid>
       </Grid>
       <ProjectNumber />

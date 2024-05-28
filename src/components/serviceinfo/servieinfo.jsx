@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import serviceinfo from "./../../assets/image/serviceinfo.avif";
+import serviceinfo from "./../../assets/image/serviceinfo.jpg";
 
 function ServiceInfo() {
   return (

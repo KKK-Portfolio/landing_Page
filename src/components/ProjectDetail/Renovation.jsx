@@ -2,6 +2,8 @@ import { Box, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import axios from "./../../api/axios";
 import { useNavigate } from "react-router-dom";
+import renobg from "./../../assets/image/renovationbg.jpg";
+import "./../companyinfo/companyinfo.css";
 
 function Renovation() {
   const [showcase, setshowcase] = useState([]);
@@ -14,8 +16,9 @@ function Renovation() {
       const projects = res.data.imageContents.filter(
         (item) => item.textContentRef.category === "Decoration"
       );
-      console.log(projects);
+      // console.log(projects);
       setshowcase(projects);
+      setLoading(false);
     } catch (error) {
       console.log(error);
     }
@@ -29,16 +32,25 @@ function Renovation() {
     navigate(`/project/${id}`);
   };
 
+  if (loading) {
+    return (
+      <Box
+        sx={{
+          padding: { xs: "30px 10px", md: "50px 100px" },
+          background: "#ffffff",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ fontSize: "24px", fontWeight: "bold" }}>Loading...</p>
+      </Box>
+    );
+  }
+
   return (
     <Box>
       <Box>
         <div className="containers">
-          <img
-            src={
-              "https://images.unsplash.com/photo-1474674556023-efef886fa147?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            }
-            alt="companyinfo"
-          />
+          <img src={renobg} alt="companyinfo" />
           <div className="company-text">
             <p>Our Renovation Projects</p>
             <span>

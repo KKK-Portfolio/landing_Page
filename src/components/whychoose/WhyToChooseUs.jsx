@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
-import safety from "./../../assets/image/safety.avif";
-import reliable from "./../../assets/image/reliable.avif";
-import expert from "./../../assets/image/expert.avif";
-import satification from "./../../assets/image/satification.avif";
-import renovation from "./../../assets/image/renovation.avif";
-import resource from "./../../assets/image/resource.avif";
+import safety from "./../../assets/image/safety.jpg";
+import reliable from "./../../assets/image/reliable.jpg";
+import expert from "./../../assets/image/expet.jpg";
+import satification from "./../../assets/image/satification.jpg";
+import renovation from "./../../assets/image/renovation.jpg";
+import resource from "./../../assets/image/resource.jpg";
 
 import "./whytochooseus.css";
 

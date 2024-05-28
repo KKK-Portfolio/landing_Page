@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import companyinfo from "./../../assets/image/companyinfo.avif";
+import companyinfo from "./../../assets/image/companyinfo.jpg";
 
 import "./companyinfo.css";
 

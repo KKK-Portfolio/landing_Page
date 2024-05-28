@@ -1,9 +1,9 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import construction from "./../../assets/image/construction.avif";
-import design from "./../../assets/image/design.avif";
-import steel from "./../../assets/image/steel.avif";
-import renovation from "./../../assets/image/renovationbg.avif";
+import construction from "./../../assets/image/construction.jpg";
+import design from "./../../assets/image/design.jpg";
+import steel from "./../../assets/image/stel.jpg";
+import renovation from "./../../assets/image/renovationbg.jpg";
 import { useNavigate } from "react-router-dom";
 
 import "./serviceoffer.css";

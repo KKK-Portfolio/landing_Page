@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import finished from "./../../assets/image/finish.png";
 import staff from "./../../assets/image/staff.png";
 import year from "./../../assets/image/year.png";
-import backgroudfinidh from "./../../assets/image/finish.avif";
-import backgroudstaff from "./../../assets/image/staff.avif";
-import backgroudyear from "./../../assets/image/year.avif";
+import backgroudfinidh from "./../../assets/image/finish.jpg";
+import backgroudstaff from "./../../assets/image/staff.jpg";
+import backgroudyear from "./../../assets/image/year.jpg";
 import { useInView } from "react-intersection-observer";
 import { useSpring, animated } from "@react-spring/web";
 import axios from "./../../api/axios";
@@ -62,7 +62,7 @@ function ProjectNumber() {
       // console.log(res.data.achievementDetails[0].companyExperienceYears);
       setYears(res.data.achievementDetails[0].companyExperienceYears);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }
 
@@ -79,7 +79,7 @@ function ProjectNumber() {
     >
       <Grid item xs={4}>
         <div className="project-number-container">
-          <img src={backgroudfinidh} alt="background" />
+          <img src={backgroudfinidh} alt="background" loading="lazy" once />
           <div className="project-number">
             <img src={finished} alt="finished" />
             <p className="number">

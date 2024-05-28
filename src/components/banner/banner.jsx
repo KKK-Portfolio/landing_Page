@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import bannerOne from "./../../assets/image/kkk-heroBanner.jpg";
-import { Link, NavLink } from "react-router-dom";
+import bannerOne from "./../../assets/image/giphy.gif";
+import { NavLink } from "react-router-dom";
 import { useQuery } from "react-query";
 import axios from "./../../api/axios";
+import Loading from "./../Loading";
 import "./banner.css";
 
 function DemoCarousel() {
@@ -17,26 +18,8 @@ function DemoCarousel() {
   if (isLoading) {
     return (
       <div className="banner-container">
-        <Carousel
-          showThumbs={false}
-          autoPlay
-          infiniteLoop
-          showStatus={false}
-          swipeable={false}
-        >
-          <div className="carousel-item">
-            <img src={bannerOne} alt="banner" className="center" />
-          </div>
-        </Carousel>
-        <div className="carousel-text">
-          <p>
-            Contact our Kaung Kaday Kyawl Co,.Ltd for your business and
-            construction project with confidence.
-          </p>
-
-          <Link to="/project">
-            <button className="banner-btn">View Our Projects</button>
-          </Link>
+        <div className="carousel-item" style={{ background: "#000" }}>
+          <Loading />
         </div>
       </div>
     );

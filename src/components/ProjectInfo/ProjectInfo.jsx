@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
-import projectinfo from "./../../assets/image/projectinfo.avif";
+import projectinfo from "./../../assets/image/projectinfo.jpg";
+import "./../companyinfo/companyinfo.css";
 
 function ProjectInfo() {
   return (

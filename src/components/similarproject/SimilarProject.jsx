@@ -18,7 +18,7 @@ function SimilarProject() {
       const projects = res.data.imageContents.filter(
         (item) => item.textContentRef.category === pj.data.textContent.category
       );
-      console.log(projects);
+      // console.log(projects);
       setshowcase(projects);
       setLoading(false);
     } catch (error) {

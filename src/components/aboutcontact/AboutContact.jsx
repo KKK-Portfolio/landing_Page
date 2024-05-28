@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import circle from "./../../assets/image/circle.avif";
+import circle from "./../../assets/image/circle.jpg";
 
 import "./aboutcontact.css";
 import { NavLink } from "react-router-dom";
@@ -16,7 +16,7 @@ function AboutContact() {
     >
       <div className="about-contact-container">
         <div className="circle-image">
-          <img src={circle} alt="circle" />
+          <img src={circle} alt="circle" loading="lazy" />
         </div>
 
         <Box

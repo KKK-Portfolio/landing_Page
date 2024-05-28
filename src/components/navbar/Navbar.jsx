@@ -93,7 +93,9 @@ function Navbar(props) {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              <img src={logo} alt="logo" />
+              <NavLink to="/">
+                <img src={logo} alt="logo" />
+              </NavLink>
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <NavLink

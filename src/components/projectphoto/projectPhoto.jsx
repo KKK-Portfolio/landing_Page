@@ -10,8 +10,7 @@ function ProjectPhoto() {
   async function fetchShowcase() {
     try {
       const res = await axios.get(`api/v1/contents/${id}`);
-      console.log(res.data.imageContent.images);
-      // setshowcase(res.data.imageContents);
+      // console.log(res.data.imageContent.images);
       setProject(res.data.imageContent.images);
     } catch (error) {}
   }

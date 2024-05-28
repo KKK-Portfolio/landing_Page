@@ -5,6 +5,7 @@
   height: 424px;
 
   position: relative;
+  overflow: hidden;
 }
 
 .containers::after {
@@ -21,13 +22,14 @@
 .containers img {
   width: inherit;
   height: inherit;
+  object-fit: cover;
 }
 
 .company-text {
   position: absolute;
   z-index: 1;
 
-  top: 25%;
+  top: 20%;
   padding: 0 100px;
 }
 
@@ -50,12 +52,15 @@
   .containers {
     width: 100%;
     height: 50vh;
+
+    overflow: hidden;
   }
 
   .company-text {
     padding: 0 10px;
 
     top: 50%;
+    transform: translateY(-50%);
   }
 
   .company-text p {
@@ -72,17 +77,20 @@
   .containers {
     width: 100%;
     height: 50vh;
+
+    overflow: hidden;
   }
 
   .company-text {
     padding: 0 10px;
 
     top: 50%;
+    transform: translateY(-50%);
   }
 
   .company-text p {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   .company-text span {

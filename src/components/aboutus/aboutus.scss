@@ -15,17 +15,20 @@
   margin-bottom: 40px;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .about-image img {
   width: inherit;
   height: inherit;
+  object-fit: cover;
 }
 
 .about-text {
   font-size: 22px;
+  font-family: $PoppinsFont;
   color: black;
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 0;
 }
 
@@ -46,6 +49,7 @@
 .project-number-container img {
   width: 100%;
   height: inherit;
+  object-fit: cover;
 }
 
 .project-number-container::after {
@@ -95,6 +99,7 @@
   width: 64px;
   height: 64px;
   margin-bottom: 40px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 600px) {
