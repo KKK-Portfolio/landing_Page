@@ -8,22 +8,15 @@ import axios from "./../../api/axios";
 import Loading from "./../Loading";
 import "./banner.css";
 
+import banner1 from "./../../assets/image/Banner/city.avif";
+import banner2 from "./../../assets/image/Banner/jc-gellidon-Khqmo4T-rs0-unsplash.jpg";
+import banner3 from "./../../assets/image/Banner/nathan-waters-j7q-Z9DV3zw-unsplash.jpg";
+import banner4 from "./../../assets/image/Banner/shea-rouda-Vtl6cOhO87Y-unsplash.jpg";
+
 function DemoCarousel() {
   // const [images, setIm] = React.useState([]);
 
-  const { isLoading, data } = useQuery("banner", () => {
-    return axios.get("api/v1/banners/images");
-  });
-
-  if (isLoading) {
-    return (
-      <div className="banner-container">
-        <div className="carousel-item" style={{ background: "#000" }}>
-          <Loading />
-        </div>
-      </div>
-    );
-  }
+  const data = [banner3, banner1, banner2, banner4];
 
   return (
     <div className="banner-container">
@@ -35,16 +28,9 @@ function DemoCarousel() {
         swipeable={false}
       >
         {data &&
-          data.data.map((item) => (
-            <div className="carousel-item" key={item._id}>
-              <img
-                src={
-                  `${process.env.REACT_APP_API_URL}api/v1/banners/${item.filename}` ||
-                  bannerOne
-                }
-                alt="banner"
-                className="center"
-              />
+          data.map((item, index) => (
+            <div className="carousel-item" key={index}>
+              <img src={item} alt="banner" className="center" />
             </div>
           ))}
       </Carousel>

@@ -24,51 +24,9 @@ function Number({ n }) {
 }
 
 function ProjectNumber() {
-  const [project, setProject] = useState(0);
-  const [staffCounts, setStaffCounts] = useState(0);
-  const [years, setYears] = useState(0);
-
-  async function fetchPjNumbers() {
-    try {
-      const res = await axios.get("api/v1/achievements/projects");
-      // console.log(res.data);
-      setProject(res.data.finishedProjects * 1);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    fetchPjNumbers();
-  }, []);
-
-  async function fetchStaffNumbers() {
-    try {
-      const res = await axios.get("api/v1/achievements/staffs");
-      // console.log(res.data.staff * 1);
-      setStaffCounts(res.data.staff * 1);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    fetchStaffNumbers();
-  }, []);
-
-  async function fetchYearNumbers() {
-    try {
-      const res = await axios.get("api/v1/achievements/year");
-      // console.log(res.data.achievementDetails[0].companyExperienceYears);
-      setYears(res.data.achievementDetails[0].companyExperienceYears);
-    } catch (error) {
-      // console.log(error);
-    }
-  }
-
-  useEffect(() => {
-    fetchYearNumbers();
-  }, []);
+  const [project, setProject] = useState(80);
+  const [staffCounts, setStaffCounts] = useState(200);
+  const [years, setYears] = useState(7);
 
   return (
     <Grid
